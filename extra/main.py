@@ -10,3 +10,5 @@ download_xampp = wget.download(xampp)
 ngrok = 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip'
 download_ngrok = wget.download(ngrok)
 
+mysqlworkbench = 'https://cdn.mysql.com/archives/mysql-workbench/mysql-workbench-community-8.0.18-winx64.msi'
+download_mysqlworkbench = wget.download(mysqlworkbench)
