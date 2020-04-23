@@ -2,7 +2,7 @@
 <br/>
 
 ### Aviso 
-**O conteúdo de apresentação desta Disciplina em README.md é anexado sobre o repositório struct**.
+**O conteúdo de apresentação desta Disciplina em README.md é anexado neste repositório**.
 
 <br/>
 <br/>
