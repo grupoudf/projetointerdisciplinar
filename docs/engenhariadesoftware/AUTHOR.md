@@ -18,7 +18,7 @@ Disponibilizar o trabalho ou conjunto de atividades do grupo na Disciplina de En
 <br/>
 
 ### Colaboradores e Componentes do Grupo
-Isabelle Trindade, Mayro Almeida, Pablo Santos, Eudson Durães, Jéssica Valadares, Fábio Borbas, Pedro Guilherme 
+Isabelle Trindade, Mayro Almeida, Pablo Santos, Eudson Durães, Fábio Borbas, Pedro Guilherme 
 
 <br/>
 <br/>
