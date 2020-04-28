@@ -7,10 +7,9 @@ use App\PersonalTrainer;
 
 class PersonalTrainerController extends Controller
 {
-    //public function PersonalTrainerController(){
-        //$personaltrainers = PersonalTrainer::all();
-        //Recuperando os dados do banco de dados
-    //}
+
+    //public $personaltrainers = PersonalTrainer::all();
+   
     public function Cadastrar(){
        
     }

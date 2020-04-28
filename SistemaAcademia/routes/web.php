@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
 
+Route::get('CadastroPersonalTrainer', function () {
+    return view('CadastroPersonalTrainer');
+})->name('Personal');
+
+Route::get('CadastroCliente', function () {
+    return view('CadastroCliente');
+})->name('Cliente');
