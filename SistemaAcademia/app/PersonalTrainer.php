@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class PersonalTrainer extends Model
 {
-    protected $table = 'PersonalTrainer';//Definindo qual tabela esse modelo vai sicronizar
+    //Definindo qual tabela esse modelo vai sicronizar
+    protected $table = 'PersonalTrainer';
 }

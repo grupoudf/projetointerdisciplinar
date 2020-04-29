@@ -24,3 +24,9 @@ Route::get('CadastroPersonalTrainer', function () {
 Route::get('CadastroCliente', function () {
     return view('CadastroCliente');
 })->name('Cliente');
+
+
+// Controllers
+Route::post('Cadastrar','PersonalTrainerController@Cadastrar')->name('Cadastrar');
+
+Route::get('TodosPersonais','PersonalTrainerController@ExibirTodos')->name('ExibirTodos');

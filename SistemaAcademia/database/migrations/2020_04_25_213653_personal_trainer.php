@@ -15,7 +15,7 @@ class PersonalTrainer extends Migration
     {
         Schema::create('PersonalTrainer', function (Blueprint $table){
             $table->id();
-            $table->unsignedBigInteger('TipoUsuario');
+            $table->unsignedBigInteger('TipoUsuario')->default(1);
             $table->string('name');
             $table->string('email')->unique();
             $table->string('AtividadeFisica');
