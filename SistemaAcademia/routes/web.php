@@ -27,6 +27,8 @@ Route::get('CadastroCliente', function () {
 
 
 // Controllers
-Route::post('Cadastrar','PersonalTrainerController@Cadastrar')->name('Cadastrar');
+Route::post('CadastrarPersonal','PersonalTrainerController@Cadastrar')->name('CadastrarPersonal');
+
+Route::post('CadastrarCliente','UserController@Cadastrar')->name('CadastrarCliente');
 
 Route::get('TodosPersonais','PersonalTrainerController@ExibirTodos')->name('ExibirTodos');

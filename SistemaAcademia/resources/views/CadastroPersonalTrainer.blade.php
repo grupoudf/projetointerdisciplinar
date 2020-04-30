@@ -7,7 +7,7 @@ Cadastro Personal Trainer
 @section('conteudo')
 <h1>Cadastro de Personal Trainer</h1>
 
-<form action="{{Route('Cadastrar')}}" method="POST">
+<form action="{{Route('CadastrarPersonal')}}" method="POST">
 @csrf
 <div class="form-group card">
 
@@ -44,7 +44,7 @@ Cadastro Personal Trainer
 
   <div class="row AtividadeFisica card">
     <div class="col">
-        <label for="Atividade Fisica">Atividade fisica principal</label>
+        <label for="Atividade Fisica">Qual atividade fisica vc está apto para ensinar?</label>
         <input class="form-control" name="AtividadeFisica" type="text" id="Atividade Fisica">
     </div>
   </div>

@@ -24,7 +24,7 @@ class PersonalTrainerController extends Controller
 
         return view('home');
     }
-
+    
     public function ExibirTodos(){
         $personaltrainers = PersonalTrainer::all();
         
