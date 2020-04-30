@@ -23,7 +23,7 @@ Mayro Almeida, Pablo Santos, Eudson Durães, Fábio Borbas, Pedro Guilherme
 
 Primeiramente deve-ser instalar composer: 
 
-``https://getcomposer.org/download/``
+https://getcomposer.org/download/
 
 Depois do composer instalado, é necessário instalar algumas depedências, para isso vá ate a pasta onde encotra-se o sistema academia e execute o seguinte comando:
 
