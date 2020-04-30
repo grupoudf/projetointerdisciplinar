@@ -37,6 +37,8 @@ Com o laravel instalado você terá acesso a varios comandos, mas o comando que 
 
 ``php artisan migrate``
 
+Obs: O mysql do xampp deve estar ligado para funcionar
+
 Esse comando irá criar o banco de dados com todas as tabelas (esse comando deve ser executado dentro da pasta do sistema). Agora resta apenas configura o banco de dados dentro do sistema, no arquivo .env.example. Primeiro renomeie o arquivo para somente .env, agora na linha 12 do arquivo, onde esta escrito "DB_DATABASE", coloque o nome do banco de dados criado acima.
 
 Pronto, se tudo ocorreu bem o sistemas está funcionando.
