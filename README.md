@@ -19,6 +19,25 @@
 ### Colaboradores e Componentes do Grupo
 Mayro Almeida, Pablo Santos, Eudson Durães, Fábio Borbas, Pedro Guilherme 
 
+### Dependências
+
+Primeiramente deve-ser instalar composer: 
+
+``https://getcomposer.org/download/``
+
+Depois do composer instalado, é necessário instalar algumas depedências, para isso, vá ate a pasta onde encotra-se o sistema academia e execute o seguinte comando:
+
+``comando:composer install``
+
+Agora é preciso criar o banco de dados para a aplicação. O laravel transforma todas as tabelas do banco de dados em classes, portanto o bando já está salvo dentro da aplicação. Mas para cria-lo e necessário usar o comando do laravel, primeiramente deve-se instalar o laravel.
+
+``composer global require laravel/installer``
+
+Com o laravel instalado você terá acesso a varios comandos, mas o comando que importa agora é:
+
+``php artisan migrate``
+
+Esse comando irá criar o banco de dados com todas as tabelas (esse comando deve ser executado dentro da pasta do sistema). Pronto, se tudo ocorreu bem o sistemas está funcionando.
 <br/>
 <br/>
 <br/>
