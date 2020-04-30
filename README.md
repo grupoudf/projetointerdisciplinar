@@ -27,7 +27,7 @@ Primeiramente deve-ser instalar composer:
 
 Depois do composer instalado, é necessário instalar algumas depedências, para isso vá ate a pasta onde encotra-se o sistema academia e execute o seguinte comando:
 
-``comando:composer install``
+``composer install``
 
 Agora é preciso criar o banco de dados para a aplicação. O laravel transforma todas as tabelas do banco de dados em classes, portanto o bando já está salvo dentro da aplicação. Mas para cria-lo e necessário usar o comando do laravel, mas primeiramente deve-se instalar o laravel.
 
