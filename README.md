@@ -29,7 +29,7 @@ Depois do composer instalado, é necessário instalar algumas depedências, para
 
 ``composer install``
 
-Agora é preciso criar o banco de dados para a aplicação. O laravel transforma todas as tabelas do banco de dados em classes, portanto o bando já está salvo dentro da aplicação. Mas para cria-lo e necessário usar o comando do laravel, mas primeiramente deve-se instalar o laravel.
+Agora é preciso criar o banco de dados para a aplicação. O laravel transforma todas as tabelas do banco de dados em classes, portanto as tabelas já estão salvo dentro da aplicação. Mas para cria-lo e necessário usar o comando do laravel, mas primeiramente deve-se instalar o laravel.
 
 ``composer global require laravel/installer``
 
