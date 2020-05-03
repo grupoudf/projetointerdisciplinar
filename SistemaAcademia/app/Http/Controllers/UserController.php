@@ -3,37 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\User;
+
 
 class UserController extends Controller
 {
     public function Cadastrar(Request $request){
+       $usuario = new User();
 
-        $Cliente = new User();
+       $usuario->name = $request->nome;
+       $usuario->email = $request->email;
+       $usuario->password = Hash::make($request->senha);
 
-        $Cliente->name = $request->Nome;
-        $Cliente->email = $request->Email;
-        $Cliente->AtividadeFisica = $request->AtividadeFisica;
-        $Cliente->password = $request->Senha;
-        $Cliente->cpf = $request->Cpf;
-        $Cliente->telefone = $request->Telefone;
-        $Cliente->sexo = $request->Sexo;
-        $Cliente->nascimento = $request->Nascimento;
-        $Cliente->save();
+       $usuario->save();
 
-        return view('home');
-
+       return redirect()->route('loginn');
     }
 
-    public function Exibir(){
-
+    public function ExibirPorID(){
+        return view('MeuPerfil');
     }
 
-    public function Atualizar(){
-
-    }
-    
-    public function Deletar(){
-
+    public function Alterar(Request $request){
+      dd($request);
     }
 }
