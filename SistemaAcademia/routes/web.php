@@ -12,23 +12,29 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('CadastroPersonalTrainer', function () {
-    return view('CadastroPersonalTrainer');
-})->name('Personal');
+Route::get('CadastroUsuario', function () {
+    return view('CadastrarUsuario');
+})->name('CadastroUsuario');
 
-Route::get('CadastroCliente', function () {
-    return view('CadastroCliente');
-})->name('Cliente');
+// Rotas que levam ao controllers
+Route::get('MeuPerfil','UserController@ExibirPorID')->name('MeuPerfil');
 
+Route::post('AlterarUsuario','UserController@Alterar')->name('AlterarUsuario');
 
-// Controllers
-Route::post('CadastrarPersonal','PersonalTrainerController@Cadastrar')->name('CadastrarPersonal');
+Route::post('CadastrarUsuario','UserController@Cadastrar')->name('CadastrarUsuario');
+// Auth
+Route::get('admin','AuthController@dashboard')->name('admin');
+//Mostrando tela de login
+Route::get('loginn','AuthController@login')->name('loginn');
+//Enviando informações para validar o login
+Route::post('logar','AuthController@logar')->name('logar');
+//Logout
+Route::get('logout','AuthController@logout')->name('logout');
 
-Route::post('CadastrarCliente','UserController@Cadastrar')->name('CadastrarCliente');
+Auth::routes();
 
-Route::get('TodosPersonais','PersonalTrainerController@ExibirTodos')->name('ExibirTodos');
+//Route::get('/home', 'HomeController@index')->name('home');

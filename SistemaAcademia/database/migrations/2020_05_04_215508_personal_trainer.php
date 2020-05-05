@@ -13,26 +13,23 @@ class PersonalTrainer extends Migration
      */
     public function up()
     {
-        Schema::create('PersonalTrainer', function (Blueprint $table){
+        Schema::create('PersonalTrainer', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('TipoUsuario')->default(1);
+            $table->unsignedBigInteger('tipo_usuario')->default(1);
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('AtividadeFisica');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
-            $table->string('cpf');
-            $table->string('telefone');
             $table->string('sexo');
             $table->date('nascimento');
+            $table->string('AtividadeFisica');
+            $table->string('telefone');
+            $table->rememberToken();
             $table->timestamps();
-
-           
         });
 
         Schema::table('PersonalTrainer', function (Blueprint $table) {
-            $table->foreign('TipoUsuario')->references('id')->on('TipoUsuario');
+            $table->foreign('tipo_usuario')->references('id')->on('Previlegios');
         });
     }
 
@@ -43,6 +40,6 @@ class PersonalTrainer extends Migration
      */
     public function down()
     {
-        //
+      Schema::dropIfExists('PersonalTrainer');
     }
 }

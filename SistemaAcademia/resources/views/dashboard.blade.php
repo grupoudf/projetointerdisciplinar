@@ -1,10 +1,9 @@
 @extends('master.base')
 
 @section('pagina')
-Home
+Painel
 @endsection
 
 @section('conteudo')
-<h1>Home</h1>
-
+<h1>Painel de Administração</h1>
 @endsection
