@@ -17,11 +17,11 @@
 <br/>
 
 ### Colaboradores e Componentes do Grupo
-Mayro Almeida, Pablo Santos, Eudson Durães, Fábio Borbas, Pedro Guilherme 
+Mayro Almeida, Pablo Santos, Eudson Durães, Fábio Borbas, Pedro Guilherme
 
 ### Dependências
 
-Primeiramente deve-ser instalar composer: 
+Primeiramente deve-ser instalar composer:
 
 https://getcomposer.org/download/
 
@@ -41,7 +41,7 @@ Com o laravel instalado você terá acesso a varios comandos, mas o comando que 
 
 Esse comando irá criar o banco de dados com todas as tabelas (esse comando deve ser executado dentro da pasta do sistema). Agora resta apenas configura o banco de dados dentro do sistema, no arquivo .env.example. Primeiro renomeie o arquivo para somente .env, agora na linha 12 do arquivo, onde esta escrito "DB_DATABASE", coloque o nome do banco de dados criado acima.
 
-Pronto, se tudo ocorreu bem o sistema está funcionando.
+Pronto, se tudo ocorreu bem o sistema está funcionando..
 <br/>
 <br/>
 <br/>
