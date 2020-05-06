@@ -15,8 +15,7 @@ class Previlegios extends Migration
     {
         Schema::create('Previlegios', function (Blueprint $table) {
             $table->id();
-            $table->string('Previlegios');
-            $table->timestamps();
+            $table->string('TipoUsuario');
         });
     }
 
