@@ -15,15 +15,15 @@ class AuthController extends Controller
         // Caso não esteja logado
         return redirect()->route('loginn');
     }
-    
+
     //Mostrando tela de login
     public function login(){
       return view('loginn');
     }
-    
+
     // Logando os usuario no sistema
     public function logar(Request $request){
-       
+
        $credentials = [
            'email'=> $request->email,
            'password'=> $request->password
@@ -31,9 +31,11 @@ class AuthController extends Controller
 
        //Função do laravel para fazer o login
        if(Auth::attempt($credentials)){
+
        return redirect()->route('home');
+       
        }
-       return redirect()->back()->withInput()->withErrors("Os dados informados não conferem!"); 
+       return redirect()->back()->withInput()->withErrors("Os dados informados não conferem!");
     }
 
     public function logout(){

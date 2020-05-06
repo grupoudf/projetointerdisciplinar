@@ -46,8 +46,12 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
-    ],
 
+    'PersonalTrainer' => [
+           'driver' => 'session',
+           'provider' => 'PersonalTrainer',
+       ],
+    ],
     /*
     |--------------------------------------------------------------------------
     | User Providers
@@ -71,10 +75,10 @@ return [
             'model' => App\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'users' => [
+             'driver' => 'eloquent',
+             'model' => App\PersonalTrainer::class,
+         ],
     ],
 
     /*

@@ -1,16 +1,17 @@
 @extends('master.base')
+
 @section('pagina')
 Cadastro
 @endsection
 
 @section('conteudo')
-<h1>Cadastro de Usuário</h1>
+<h1>Cadastro de Cliente</h1>
 <form action="{{route('CadastrarUsuario')}}" method="POST">
     @csrf
     <div class="form-group card">
 
         <div class="row">
-    
+
         <div class="col-sm">
         <label for="nome">Nome: </label>
         <input type="text" name="nome" class="form-control" id="nome" placeholder="Digite seu nome completo">
@@ -31,7 +32,7 @@ Cadastro
         <input class="form-control" name="Nascimento" type="date" id="Nascimento" placeholder="Data de Nascimento">
         </div>
         <div class="col">
-            
+
             <label for="telefone">Telefone: </label>
             <input type="number" name="Telefone" class="form-control" id="telefone" placeholder="telefone">
         </div>
@@ -52,10 +53,10 @@ Cadastro
             <input class="form-control" name="senha" type="password" id="Senha" placeholder="Senha">
         </div>
         </div>
-        
+
         <div class="row">
         <div class="col">
-        <button class="btn btn-dark" type="submit">Salvar</button>
+        <button class="btn btn-dark" type="submit">Cadastrar</button>
         </div>
         </div>
     </form>
