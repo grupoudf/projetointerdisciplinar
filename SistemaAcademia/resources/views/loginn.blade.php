@@ -37,10 +37,25 @@
     <label for="inputPassword">Senha</label>
   </div>
 
+  <div class="row">
+    <div class="col">
+      <input type="radio" name="login" id="login" value="Personal">
+      <label for="login">Logar como Personal</label><br>
+    </div>
+    <div class="col">
+      <input type="radio" name="login" id="login" value="User" checked>
+      <label for="login">Logar como Cliente</label><br>
+    </div>
+  </div>
   <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Lembre me
-    </label>
+      <div class="row">
+        <div class="col">
+          <label>
+            <input type="checkbox" value="remember-me"> Lembre me
+          </label>
+        </div>
+      </div>
+    </div>
   <p>Não possui conta? Cadastre-se como <a href="{{route('CadastroPersonal')}}">Personal Trainer<a/> ou <a href="{{route('CadastroUsuario')}}">Cliente<a/>.</p>
   </div>
   <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>

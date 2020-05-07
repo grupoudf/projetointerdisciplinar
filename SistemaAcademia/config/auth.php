@@ -75,7 +75,7 @@ return [
             'model' => App\User::class,
         ],
 
-        'users' => [
+        'PersonalTrainer' => [
              'driver' => 'eloquent',
              'model' => App\PersonalTrainer::class,
          ],
