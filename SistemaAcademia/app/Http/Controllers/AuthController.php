@@ -39,7 +39,7 @@ class AuthController extends Controller
         }
         return redirect()->back()->withInput()->withErrors("Os dados informados não conferem!");
       }
-      
+
       //Logando como Personal Trainer
       if($request->login === "Personal"){
 
@@ -51,9 +51,16 @@ class AuthController extends Controller
       }
 
     }
-
-    public function logout(){
+    // Logout de Cliente
+    public function LogoutUser(){
+      
         Auth::logout();
         return redirect()->route('home');
+    }
+    // Logout de Personal
+    public function LogoutPersonal(){
+
+       Auth::guard('PersonalTrainer')->Logout();
+       return redirect()->route('home');
     }
 }

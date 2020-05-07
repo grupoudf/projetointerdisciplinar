@@ -40,17 +40,15 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
+        'PersonalTrainer' => [
+            'driver' => 'session',
+            'provider' => 'PersonalTrainer',
+        ],
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
             'hash' => false,
         ],
-
-    'PersonalTrainer' => [
-           'driver' => 'session',
-           'provider' => 'PersonalTrainer',
-       ],
     ],
     /*
     |--------------------------------------------------------------------------

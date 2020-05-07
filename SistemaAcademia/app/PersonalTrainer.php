@@ -10,6 +10,8 @@ class PersonalTrainer extends Authenticatable
 {
     // Definindo qual tabela esse model irá se conectar
     protected $table = 'PersonalTrainer';
+    // Definindo guard
+    protected $guard = 'PersonalTrainer';
     // Definindo campos como "preenchiveis"
     protected $fillable = [
         'name', 'email', 'password',

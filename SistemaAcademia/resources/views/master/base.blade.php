@@ -21,15 +21,27 @@
         </ul>
 
         @if(Auth::check())
-        
+
         <div class="btn-group">
           <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{Auth::user()->name}}
+            Cliente: {{Auth::user()->name}}
           </button>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="{{route('MeuPerfil')}}">Meu Perfil</a>
             <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{{route('logout')}}">Sair</a>
+          <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
+          </div>
+        </div>
+
+        @elseif(Auth::guard('PersonalTrainer')->check())
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Personal: {{Auth::guard('PersonalTrainer')->user()->name}}
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{{route('MeuPerfil')}}">Meu Perfil</a>
+            <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{route('LogoutPersonal')}}">Sair</a>
           </div>
         </div>
         @else

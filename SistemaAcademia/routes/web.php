@@ -25,6 +25,7 @@ Route::get('CadastroPersonal', function () {
 })->name('CadastroPersonal');
 
 // Rotas que levam ao controllers
+
 Route::get('MeuPerfil','UserController@ExibirPorID')->name('MeuPerfil');
 
 Route::post('AlterarUsuario','UserController@Alterar')->name('AlterarUsuario');
@@ -41,6 +42,8 @@ Route::get('loginn','AuthController@login')->name('loginn');
 //Enviando informações para validar o login
 Route::post('logar','AuthController@logar')->name('logar');
 //Logout
-Route::get('logout','AuthController@logout')->name('logout');
+Route::get('LogoutUser','AuthController@LogoutUser')->name('LogoutUser');
+
+Route::get('LogoutPersonal','AuthController@LogoutPersonal')->name('LogoutPersonal');
 
 //Route::get('/home', 'HomeController@index')->name('home');
