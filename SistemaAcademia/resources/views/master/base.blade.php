@@ -24,7 +24,7 @@
 
         <div class="btn-group">
           <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Cliente: {{Auth::user()->name}}
+            <b>Cliente:</b> {{Auth::user()->name}}
           </button>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="{{route('MeuPerfil')}}">Meu Perfil</a>
@@ -36,7 +36,7 @@
         @elseif(Auth::guard('PersonalTrainer')->check())
         <div class="btn-group">
           <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Personal: {{Auth::guard('PersonalTrainer')->user()->name}}
+            <b>Personal:</b> {{Auth::guard('PersonalTrainer')->user()->name}}
           </button>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="{{route('MeuPerfil')}}">Meu Perfil</a>
