@@ -22,4 +22,11 @@ class PersonalTrainerController extends Controller
 
      return redirect()->route('loginn');
   }
+
+  public function ExibirPorID($id){
+    // Recuperando dados do usuario logado
+    $usuario = PersonalTrainer::find($id);
+    //Enviado usuario encotrado como parâmentro para a view
+    return view('MeuPerfil',['usuario' => $usuario]);
+  }
 }

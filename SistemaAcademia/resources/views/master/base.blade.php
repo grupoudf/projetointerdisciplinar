@@ -27,7 +27,7 @@
             <b>Cliente:</b> {{Auth::user()->name}}
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="{{route('MeuPerfil')}}">Meu Perfil</a>
+            <a class="dropdown-item" href="MeuPerfilCliente/{{Auth::user()->id}}">Meu Perfil</a>
             <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
           </div>
@@ -39,7 +39,7 @@
             <b>Personal:</b> {{Auth::guard('PersonalTrainer')->user()->name}}
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="{{route('MeuPerfil')}}">Meu Perfil</a>
+            <a class="dropdown-item" href="MeuPerfilPersonal/{{Auth::guard('PersonalTrainer')->user()->id}}">Meu Perfil</a>
             <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{{route('LogoutPersonal')}}">Sair</a>
           </div>

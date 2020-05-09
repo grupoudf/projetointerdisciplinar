@@ -26,7 +26,9 @@ Route::get('CadastroPersonal', function () {
 
 // Rotas que levam ao controllers
 
-Route::get('MeuPerfil','UserController@ExibirPorID')->name('MeuPerfil');
+Route::get('MeuPerfilCliente/{id}','UserController@ExibirPorID')->name('MeuPerfilCliente');
+
+Route::get('MeuPerfilPersonal/{id}','PersonalTrainerController@ExibirPorID')->name('MeuPerfilPersonal');
 
 Route::post('AlterarUsuario','UserController@Alterar')->name('AlterarUsuario');
 

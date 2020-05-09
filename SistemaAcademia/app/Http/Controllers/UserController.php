@@ -24,8 +24,11 @@ class UserController extends Controller
        return redirect()->route('loginn');
     }
 
-    public function ExibirPorID(){
-        return view('MeuPerfil');
+    public function ExibirPorID($id){
+        // Recuperando dados do usuario logado
+        $usuario = User::find($id);
+        //Enviado usuario encotrado como parâmentro para a view
+        return view('MeuPerfil',['usuario' => $usuario]);
     }
 
     public function Alterar(Request $request){
