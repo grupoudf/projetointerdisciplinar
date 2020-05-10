@@ -8,11 +8,10 @@ Cadastro
 <h1>Cadastro de Personal Trainer</h1>
 <form action="{{route('CadastrarPersonal')}}" method="POST">
     @csrf
-    <div class="form-group card">
+    <div class="form-group card p-3">
 
         <div class="row">
-
-        <div class="col-sm">
+        <div class="col">
         <label for="nome">Nome: </label>
         <input type="text" name="nome" class="form-control" id="nome" placeholder="Digite seu nome completo">
         </div>
@@ -37,8 +36,8 @@ Cadastro
             <input type="number" name="Telefone" class="form-control" id="telefone" placeholder="telefone">
         </div>
         </div>
-        <div class="row">
-        <div class="col">
+        <div class="row justify-content-center p-3">
+        <div class="col-6">
         <label for="Atividade Fisica">Atividade física principal</label>
         <input class="form-control" name="AtividadeFisica" type="text" id="Atividade Fisica">
         </div>
@@ -54,8 +53,8 @@ Cadastro
         </div>
         </div>
 
-        <div class="row">
-        <div class="col">
+        <div class="row justify-content-center">
+        <div class="col mt-3">
         <button class="btn btn-dark" type="submit">Cadastrar</button>
         </div>
         </div>

@@ -8,7 +8,7 @@ Cadastro
 <h1>Cadastro de Cliente</h1>
 <form action="{{route('CadastrarUsuario')}}" method="POST">
     @csrf
-    <div class="form-group card">
+    <div class="form-group card p-3">
 
         <div class="row">
 
@@ -37,8 +37,8 @@ Cadastro
             <input type="number" name="Telefone" class="form-control" id="telefone" placeholder="telefone">
         </div>
         </div>
-        <div class="row">
-        <div class="col">
+        <div class="row justify-content-center p-3">
+        <div class="col-6">
         <label for="Atividade Fisica">Atividade física principal</label>
         <input class="form-control" name="AtividadeFisica" type="text" id="Atividade Fisica">
         </div>
@@ -54,8 +54,8 @@ Cadastro
         </div>
         </div>
 
-        <div class="row">
-        <div class="col">
+        <div class="row justify-content-center">
+        <div class="col mt-3">
         <button class="btn btn-dark" type="submit">Cadastrar</button>
         </div>
         </div>

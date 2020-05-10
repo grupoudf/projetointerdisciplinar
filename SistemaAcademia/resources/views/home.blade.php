@@ -8,10 +8,10 @@ Home
 <h1>Home</h1>
 
 @if(Auth::check())
-<h3>Bem vindo Cliente: {{Auth::user()->name}} </h3>
+<h3>Bem vindo Cliente</h3>
 
 
 @elseif((Auth::guard('PersonalTrainer')->check()))
-<h3>Bem vindo Persoanl Trainer: {{Auth::guard('PersonalTrainer')->user()->name}} </h3>
+<h3>Bem vindo Personal Trainer</h3>
 @endif
 @endsection

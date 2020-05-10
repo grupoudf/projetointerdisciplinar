@@ -30,11 +30,14 @@ Route::get('MeuPerfilCliente/{id}','UserController@ExibirPorID')->name('MeuPerfi
 
 Route::get('MeuPerfilPersonal/{id}','PersonalTrainerController@ExibirPorID')->name('MeuPerfilPersonal');
 
-Route::post('AlterarUsuario','UserController@Alterar')->name('AlterarUsuario');
+Route::post('AlterarUsuario','UserController@@EditarDados')->name('AlterarUsuario');
+
+Route::post('AlterarPersonal','PersonalTrainerController@EditarDados')->name('AlterarPersonal');
 
 Route::post('CadastrarUsuario','UserController@Cadastrar')->name('CadastrarUsuario');
 
 Route::post('CadastrarPersonal','PersonalTrainerController@Cadastrar')->name('CadastrarPersonal');
+
 // Auth
 Auth::routes();
 

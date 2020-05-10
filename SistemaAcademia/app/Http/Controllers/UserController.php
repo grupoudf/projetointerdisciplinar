@@ -28,10 +28,10 @@ class UserController extends Controller
         // Recuperando dados do usuario logado
         $usuario = User::find($id);
         //Enviado usuario encotrado como parâmentro para a view
-        return view('MeuPerfil',['usuario' => $usuario]);
+        return view('MeuPerfilCliente',['usuario' => $usuario]);
     }
 
-    public function Alterar(Request $request){
+    public function EditarDados(Request $request){
       dd($request);
     }
 }
