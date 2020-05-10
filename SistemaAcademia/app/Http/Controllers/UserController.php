@@ -32,6 +32,50 @@ class UserController extends Controller
     }
 
     public function EditarDados(Request $request){
-      dd($request);
+      // Recuperando dados do usuario que irá ser modificado
+      $usuario = User::find($request->id);
+
+      // Se a variável existir
+      if(isset($request->nome)){
+
+         $usuario->name = $request->nome;
+         $usuario->save();
+         return redirect()->back();
+      }
+
+      if(isset($request->email)){
+
+         $usuario->email = $request->email;
+         $usuario->save();
+         return redirect()->back();
+      }
+
+      if(isset($request->Sexo)){
+
+         $usuario->sexo = $request->Sexo;
+         $usuario->save();
+         return redirect()->back();
+      }
+
+      if(isset($request->Nascimento)){
+
+         $usuario->nascimento = $request->Nascimento;
+         $usuario->save();
+         return redirect()->back();
+      }
+
+      if(isset($request->AtividadeFisica)){
+
+         $usuario->AtividadeFisica = $request->AtividadeFisica;
+         $usuario->save();
+         return redirect()->back();
+      }
+
+      if(isset($request->Telefone)){
+
+         $usuario->telefone = $request->Telefone;
+         $usuario->save();
+         return redirect()->back();
+      }
     }
 }

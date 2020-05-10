@@ -138,11 +138,11 @@ Perfil
 
 
 <!-- Modal Atividade Física -->
-<div class="modal fade" id="AlterarData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="AlterarAtividadeFisica" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Alterar Data de Nascimento</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Alterar data de nascimento</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -151,8 +151,8 @@ Perfil
 
       <form class="form-group" action="{{route('AlterarPersonal')}}" method="post">
         @csrf
-        <label for="Nascimento">Data de Nascimento:</label>
-        <input class="form-control" name="Nascimento" type="date" id="Nascimento">
+        <label for="Atividade Fisica">Atividade física principal</label>
+        <input class="form-control" name="AtividadeFisica" type="text" id="Atividade Fisica" value="{{$usuario->AtividadeFisica}}">
         <!-- Enviando id do usuário através de um input oculto -->
         <input type='hidden' name="id" value="{{$usuario->id}}">
       </div>
@@ -171,7 +171,7 @@ Perfil
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Alterar Telefone</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Alterar telefone</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

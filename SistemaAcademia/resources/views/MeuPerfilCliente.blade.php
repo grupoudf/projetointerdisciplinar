@@ -54,7 +54,7 @@ Perfil
       </div>
       <div class="modal-body">
 
-      <form class="form-group" action="{{route('AlterarPersonal')}}" method="post">
+      <form class="form-group" action="{{route('AlterarUsuario')}}" method="post">
         @csrf
         <label for="nome">Nome: </label>
         <input type="text" class="form-control" id="nome" name="nome" value="{{$usuario->name}}">
@@ -84,7 +84,7 @@ Perfil
       </div>
       <div class="modal-body">
 
-      <form class="form-group" action="{{route('AlterarPersonal')}}" method="post">
+      <form class="form-group" action="{{route('AlterarUsuario')}}" method="post">
         @csrf
         <label for="email">Email: </label>
         <input type="text" class="form-control" id="email" name="email" value="{{$usuario->email}}">
@@ -114,7 +114,7 @@ Perfil
       </div>
       <div class="modal-body">
 
-      <form class="form-group" action="{{route('AlterarPersonal')}}" method="post">
+      <form class="form-group" action="{{route('AlterarUsuario')}}" method="post">
         @csrf
         <legend>Sexo:</legend>
         <input type="radio" name="Sexo" id="Masculino" value="Masculino">
@@ -136,23 +136,51 @@ Perfil
   </div>
 </div>
 
-
-<!-- Modal Atividade Física -->
+<!-- Modal Data de nascimento -->
 <div class="modal fade" id="AlterarData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Alterar Data de Nascimento</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Alterar data de nascimento</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
 
-      <form class="form-group" action="{{route('AlterarPersonal')}}" method="post">
+      <form class="form-group" action="{{route('AlterarUsuario')}}" method="post">
         @csrf
-        <label for="Nascimento">Data de Nascimento:</label>
+        <label for="Nascimento">Data de nascimento:</label>
         <input class="form-control" name="Nascimento" type="date" id="Nascimento">
+        <!-- Enviando id do usuário através de um input oculto -->
+        <input type='hidden' name="id" value="{{$usuario->id}}">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Salvar alteração</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Atividade Física -->
+<div class="modal fade" id="AlterarAtividadeFisica" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Alterar esporte principal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      <form class="form-group" action="{{route('AlterarUsuario')}}" method="post">
+        @csrf
+        <label for="Atividade Fisica">Atividade física principal</label>
+        <input class="form-control" name="AtividadeFisica" type="text" id="Atividade Fisica" value="{{$usuario->AtividadeFisica}}">
         <!-- Enviando id do usuário através de um input oculto -->
         <input type='hidden' name="id" value="{{$usuario->id}}">
       </div>
@@ -171,14 +199,14 @@ Perfil
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Alterar Telefone</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Alterar telefone</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
 
-      <form class="form-group" action="{{route('AlterarPersonal')}}" method="post">
+      <form class="form-group" action="{{route('AlterarUsuario')}}" method="post">
         @csrf
         <label for="telefone">Telefone: </label>
         <input type="number" name="Telefone" class="form-control" id="telefone" value="{{$usuario->telefone}}">
