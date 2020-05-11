@@ -19,6 +19,7 @@ e este projeto segue o [Semantic Versioning] (https://semver.org/spec/v2.0.0.htm
 
 # Adicionado
 
+- Download dos programas: Xammp, Ngrok, MySQL Workbench como depêndencia de projeto via script com wget em python.
 - Melhoramento do Design MVC, Melhoramento na Estrutura de Arquivos, Sistema, Projeto; 
 - Opção de Login e Logout, Crud em Laravel, Bootstrap em Laravel; 
 - Barra de navegação, Definição de 3 tipos de usuário : Administrador, Cliente e Personal Trainer;
