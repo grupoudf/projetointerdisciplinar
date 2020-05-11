@@ -6,16 +6,16 @@ Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog] (https://keepachangelog.com/en/1.0.0/), 
 e este projeto segue o [Semantic Versioning] (https://semver.org/spec/v2.0.0.html).
 
-# Removido
-- Wikis de repositórios separados, links gerais
+# Realizado
+- Remoção de Wikis de repositórios separados, links gerais
 
-# Alterado
+# Alterar
 - Imagens de Interface Gráfica
 
-# Correções
-- Correção do Script, Banco de Dados SQL
-- Otimização de componentes, módulos
-- Modulação de Perfis, Padronização de Design
+# Correções 
+
+- Otimização de código, repositório e wiki, Padronização de Design
+- Correção do Script e Banco de Dados SQL, Casos de Uso
 
 # Adicionado
 
@@ -31,13 +31,10 @@ e este projeto segue o [Semantic Versioning] (https://semver.org/spec/v2.0.0.htm
 - Simplificação da Wiki, Documentação Geral do Sistema Academia, Repositório ou Guia de Instalação e Configuração;
 - Issues específicos : Sugestões de Melhoria, Erros Resolvidos, Falhas, Correções;
 
-- Revisão Textual da Documentação, Repositório;
-- Landing Page do Sistema via README, Design Mimalista para várias interfaces;
-- Link de Documentos de Projeto Interdisciplinar, Engenharia de Software, Banco de Dados;
-
-- Slide de Apresentação de Projeto, Wiki do Sistema, Projeto
-- Melhoramento visual do sistema, 
+- Revisão Textual da Documentação, Repositório; Landing Page do Sistema via README, Design Mimalista para várias interfaces;
+- Link de Documentos de Projeto Interdisciplinar, Engenharia de Software, Banco de Dados; Melhoramento visual do sistema, Slide de Apresentação de Projeto, Wiki do Sistema, Projeto;
 - Repositório **projetointerdisciplinar**, **engenhariadesoftware**, **bancodedados** foram adicionados em um único repositório
+
 
 # Sugestão de Melhoria
 
