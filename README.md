@@ -17,11 +17,4 @@
 <br/>
 
 ### Colaboradores e Componentes do Grupo
-Mayro Almeida, Pablo Santos, Eudson Durães, Fábio Borbas, Pedro Guilherme 
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+Mayro Almeida, Pablo Santos, Eudson Durães, Fábio Borbas, Pedro Guilherme

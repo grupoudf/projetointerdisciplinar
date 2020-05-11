@@ -17,24 +17,38 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('CadastroUsuario', function () {
-    return view('CadastrarUsuario');
+    return view('CadastroUsuario');
 })->name('CadastroUsuario');
 
-// Rotas que levam ao controllers
-Route::get('MeuPerfil','UserController@ExibirPorID')->name('MeuPerfil');
+Route::get('CadastroPersonal', function () {
+    return view('CadastroPersonal');
+})->name('CadastroPersonal');
 
-Route::post('AlterarUsuario','UserController@Alterar')->name('AlterarUsuario');
+// Rotas que levam ao controllers
+
+Route::get('MeuPerfilCliente/{id}','UserController@ExibirPorID')->name('MeuPerfilCliente');
+
+Route::get('MeuPerfilPersonal/{id}','PersonalTrainerController@ExibirPorID')->name('MeuPerfilPersonal');
+
+Route::post('AlterarUsuario','UserController@EditarDados')->name('AlterarUsuario');
+
+Route::post('AlterarPersonal','PersonalTrainerController@EditarDados')->name('AlterarPersonal');
 
 Route::post('CadastrarUsuario','UserController@Cadastrar')->name('CadastrarUsuario');
+
+Route::post('CadastrarPersonal','PersonalTrainerController@Cadastrar')->name('CadastrarPersonal');
+
 // Auth
+Auth::routes();
+
 Route::get('admin','AuthController@dashboard')->name('admin');
 //Mostrando tela de login
 Route::get('loginn','AuthController@login')->name('loginn');
 //Enviando informações para validar o login
 Route::post('logar','AuthController@logar')->name('logar');
 //Logout
-Route::get('logout','AuthController@logout')->name('logout');
+Route::get('LogoutUser','AuthController@LogoutUser')->name('LogoutUser');
 
-Auth::routes();
+Route::get('LogoutPersonal','AuthController@LogoutPersonal')->name('LogoutPersonal');
 
 //Route::get('/home', 'HomeController@index')->name('home');

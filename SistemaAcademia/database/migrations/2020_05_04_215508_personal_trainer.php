@@ -15,7 +15,7 @@ class PersonalTrainer extends Migration
     {
         Schema::create('PersonalTrainer', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('tipo_usuario')->default(1);
+            $table->unsignedBigInteger('privilegios')->default(1);
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -29,7 +29,7 @@ class PersonalTrainer extends Migration
         });
 
         Schema::table('PersonalTrainer', function (Blueprint $table) {
-            $table->foreign('tipo_usuario')->references('id')->on('Previlegios');
+            $table->foreign('privilegios')->references('id')->on('Previlegios');
         });
     }
 

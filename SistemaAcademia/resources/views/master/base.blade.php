@@ -17,30 +17,44 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-        
+
         </ul>
+
         @if(Auth::check())
+
         <div class="btn-group">
-          <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{Auth::user()->name}}
+          <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <b>Cliente:</b> {{Auth::user()->name}}
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="{{route('MeuPerfil')}}">Meu Perfil</a>
+            <a class="dropdown-item" href="MeuPerfilCliente/{{Auth::user()->id}}">Meu Perfil</a>
             <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{{route('logout')}}">Sair</a>
+          <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
+          </div>
+        </div>
+
+        @elseif(Auth::guard('PersonalTrainer')->check())
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <b>Personal:</b> {{Auth::guard('PersonalTrainer')->user()->name}}
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="MeuPerfilPersonal/{{Auth::guard('PersonalTrainer')->user()->id}}">Meu Perfil</a>
+            <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{route('LogoutPersonal')}}">Sair</a>
           </div>
         </div>
         @else
-        <a class="btn btn-sm btn-outline-warning px-md-5" href="{{route('loginn')}}">Login</a>
+        <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="{{route('loginn')}}">Login</a>
         @endif
-      <a class="btn btn-sm btn-outline-warning px-md-5" href="#">Pedido</a>
+        <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Pedido</a>
        </div>
 </div>
       </div>
     </nav>
   </header>
 
-<div class="container my-5">
+<div class="container mt-5">
 <br>
 @yield('conteudo')
 </div>

@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('login.css')}}">
-  
+
   </head>
   <body>
   <form class="form-signin" method='post' action="{{route('logar')}}">
@@ -37,11 +37,26 @@
     <label for="inputPassword">Senha</label>
   </div>
 
+  <div class="row">
+    <div class="col">
+      <input type="radio" name="login" id="login" value="Personal">
+      <label for="login">Logar como Personal</label><br>
+    </div>
+    <div class="col">
+      <input type="radio" name="login" id="login" value="User" checked>
+      <label for="login">Logar como Cliente</label><br>
+    </div>
+  </div>
   <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Lembre me
-    </label>
-  <p>Não possui conta? Cadastre-se como <a href="{{route('CadastroUsuario')}}">Personal Trainer<a/> ou <a href="{{route('CadastroUsuario')}}">Cliente<a/>.</p>
+      <div class="row">
+        <div class="col">
+          <label>
+            <input type="checkbox" value="remember-me"> Lembre me
+          </label>
+        </div>
+      </div>
+    </div>
+  <p>Não possui conta? Cadastre-se como <a href="{{route('CadastroPersonal')}}">Personal Trainer<a/> ou <a href="{{route('CadastroUsuario')}}">Cliente<a/>.</p>
   </div>
   <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
   <p class="mt-5 mb-3 text-muted text-center">&copy;2020</p>

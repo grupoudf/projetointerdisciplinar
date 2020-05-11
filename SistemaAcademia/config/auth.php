@@ -40,14 +40,16 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
+        'PersonalTrainer' => [
+            'driver' => 'session',
+            'provider' => 'PersonalTrainer',
+        ],
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
             'hash' => false,
         ],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | User Providers
@@ -71,10 +73,10 @@ return [
             'model' => App\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'PersonalTrainer' => [
+             'driver' => 'eloquent',
+             'model' => App\PersonalTrainer::class,
+         ],
     ],
 
     /*
