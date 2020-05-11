@@ -19,6 +19,7 @@ e este projeto segue o [Semantic Versioning] (https://semver.org/spec/v2.0.0.htm
 
 # Adicionado
 
+- Crud em Laravel, Bootstrap em Laravel
 - Estrutura de Arquivos, Sistema, Projeto, Indentração de Código;
 - Barra de navegação para tipos de usuários, Princípio Kiss - Keep It Simple Stupid, Melhoramento do Design MVC;
 - Login/Logout, Definição de 3 tipos de usuário : Administrador, Cliente e Personal Trainer;
