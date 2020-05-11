@@ -2,7 +2,7 @@
 <br/>
 
 ### Aviso 
-**Caso deseje ver o conteúdo desta Disciplina separado acesse :**.
+**Caso deseje ver o conteúdo desta Disciplina separado acesse :**
 
 <br/>
 <br/>
