@@ -2,7 +2,7 @@
 <br/>
 
 ### Aviso 
-**O conteúdo de apresentação desta Disciplina em README.md é anexado neste repositório**.
+**Caso deseje ver o conteúdo desta Disciplina separado acesse : **.
 
 <br/>
 <br/>
