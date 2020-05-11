@@ -23,7 +23,7 @@
         @if(Auth::check())
 
         <div class="btn-group">
-          <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <b>Cliente:</b> {{Auth::user()->name}}
           </button>
           <div class="dropdown-menu">
@@ -35,7 +35,7 @@
 
         @elseif(Auth::guard('PersonalTrainer')->check())
         <div class="btn-group">
-          <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <b>Personal:</b> {{Auth::guard('PersonalTrainer')->user()->name}}
           </button>
           <div class="dropdown-menu">
@@ -45,9 +45,9 @@
           </div>
         </div>
         @else
-        <a class="btn btn-sm btn-outline-warning px-md-5" href="{{route('loginn')}}">Login</a>
+        <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="{{route('loginn')}}">Login</a>
         @endif
-        <a class="btn btn-sm btn-outline-warning px-md-5" href="#">Pedido</a>
+        <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Pedido</a>
        </div>
 </div>
       </div>
