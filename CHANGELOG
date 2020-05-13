@@ -6,32 +6,38 @@ Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog] (https://keepachangelog.com/en/1.0.0/), 
 e este projeto segue o [Semantic Versioning] (https://semver.org/spec/v2.0.0.html).
 
-# Removido
-- Wikis de repositórios separados, links gerais
+# Realizado
+- Remoção de Wikis de repositórios separados, links gerais
 
-# Alterado
+# Alterar
 - Imagens de Interface Gráfica
 
-# Correções
-- Correção do Script, Banco de Dados SQL
-- Otimização de componentes, módulos
-- Modulação de Perfis, Padronização de Design
+# Correções 
+
+- Otimização de código, repositório e wiki, Padronização de Design
+- Correção do Script e Banco de Dados SQL, Casos de Uso
 
 # Adicionado
 
-- Estrutura de Arquivos, Sistema, Projeto, Indentração de Código;
-- Barra de navegação para tipos de usuários, Princípio Kiss - Keep It Simple Stupid, Melhoramento do Design MVC;
-- Login/Logout, Definição de 3 tipos de usuário : Administrador, Cliente e Personal Trainer;
+- Download dos programas: Xammp, Ngrok, MySQL Workbench como depêndencia de projeto via script com wget em python.
+- Melhoramento do Design MVC, Melhoramento na Estrutura de Arquivos, Sistema, Projeto; 
+- Opção de Login e Logout, Crud em Laravel, Bootstrap em Laravel; 
+- Barra de navegação, Definição de 3 tipos de usuário : Administrador, Cliente e Personal Trainer;
 
-- Design Mimalista; Issues no Trello, Gitter; Boas Práticas de Programação;
+- Indentração de Código, Design Mimalista;
+- Boas Práticas de Programação;
+- Princípio Kiss - Keep It Simple Stupid;
+
+- Pasta cache sobre a informação de cada disciplina ou repositório anexado
 - Simplificação da Wiki, Documentação Geral do Sistema Academia, Repositório ou Guia de Instalação e Configuração;
 - Issues específicos : Sugestões de Melhoria, Erros Resolvidos, Falhas, Correções;
 
-- Componentes, Módulos, Revisão Textual da Documentação, Repositório;
-- Landing Page do Sistema, Design Mimalista para várias interfaces;
-- Link de Documentos de Projeto Interdisciplinar, Engenharia de Software, Banco de Dados;
+- Revisão Textual da Documentação, Repositório; Landing Page do Sistema via README, Design Mimalista para várias interfaces;
+- Link de Documentos de Projeto Interdisciplinar, Engenharia de Software, Banco de Dados; Melhoramento visual do sistema, Slide de Apresentação de Projeto, Wiki do Sistema, Projeto;
+- Repositório **projetointerdisciplinar**, **engenhariadesoftware**, **bancodedados** foram adicionados em um único repositório
 
-- Slide de Apresentação de Projeto, Author para cada repositório, Wiki do Sistema, Guide do Sistema;
-- Ícone de identidade visual para login [@prosymbols](https://www.flaticon.com/br/icone-gratis/grupo_615075).
-- Melhoramento visual do sistema, repositório **projetointerdisciplinar**, **engenhariadesoftware**, **bancodedados**;
+
+# Sugestão de Melhoria
+
+- Issues no Trello, Gitter;
 

@@ -1,9 +1,15 @@
 <br/>
 <br/>
 
-### [ Google Drive ](https://drive.google.com/file/d/19gFitME9f7zNsRuT1w1Dknfmkvfpc4wQ/view?usp=sharing)
+### Aviso 
+**Para acessar o conteúdo desta Disciplina separado acesse :**
 
-**Projeto Interdisciplinar, Apresentação do Projeto**
+<br/>
+<br/>
+
+[ Projeto Interdisciplinar, Slide de Apresentação](https://drive.google.com/file/d/1rUdKuxd0iie1_1cfrbv04rb3bl_ofijM/view?usp=drivesdk)
+
+[ Projeto Interdisciplinar, Guia de Instalação e Configuração do Sistema](https://drive.google.com/file/d/1rUdKuxd0iie1_1cfrbv04rb3bl_ofijM/view?usp=drivesdk)
 
 <br/>
 <br/>
