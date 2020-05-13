@@ -6,6 +6,35 @@
     <title>S.A||@yield('pagina')</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('style.css')}}">
+    <style>
+
+      input[type="button"]{
+        display:none;
+      }
+      input[type="button"] + label{
+        background: #ddd;
+        padding: 5px 10px;
+      }
+
+      #cliente + label{
+        margin:0;
+        border-radius: 100px 0px 0px 100px;
+        color: #30383d;
+        padding: 5px 20px;
+      }
+      #personal + label{
+        margin:0;
+        border-radius: 0px 100px 100px 0px;
+        color: #30383d;
+        padding: 5px 20px;
+      }
+      #cliente:hover + label{
+        background: #e0a923;
+      }
+      #personal:hover + label{
+        background: #e0a923;
+      }
+    </style>
 </head>
 <body>
 
@@ -32,7 +61,7 @@
           <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
           </div>
         </div>
-
+       <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Pedido</a>
         @elseif(Auth::guard('PersonalTrainer')->check())
         <div class="btn-group">
           <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -46,8 +75,17 @@
         </div>
         @else
         <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="{{route('loginn')}}">Login</a>
+
+        <a href="{{route('CadastroUsuario')}}">
+        <input type="button" id="cliente">
+        <label for="cliente">Cadastro de Cliente</label>
+        </a>
+
+        <a href="{{route('CadastroPersonal')}}">
+        <input type="button" id="personal">
+        <label for="personal" >Cadastro de Personal</label>
+        </a>
         @endif
-        <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Pedido</a>
        </div>
 </div>
       </div>
