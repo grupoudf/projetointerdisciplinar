@@ -17,7 +17,7 @@ class Servico extends Migration
             $table->id();
             $table->unsignedBigInteger('UserID');
             $table->unsignedBigInteger('PersonalID');
-            $table->string('AtividadeFisica');
+            $table->unsignedBigInteger('AtividadeFisicaID');
             $table->timestamps();
 
         });
@@ -25,6 +25,7 @@ class Servico extends Migration
         Schema::table('Servico', function (Blueprint $table) {
             $table->foreign('UserID')->references('id')->on('users');
             $table->foreign('PersonalID')->references('id')->on('PersonalTrainer');
+            $table->foreign('AtividadeFisicaID')->references('id')->on('AtividadesFisicas');
         });
     }
 

@@ -22,14 +22,16 @@ class PersonalTrainer extends Migration
             $table->string('password');
             $table->string('sexo');
             $table->date('nascimento');
-            $table->string('AtividadeFisica');
+            $table->unsignedBigInteger('AtividadeFisicaID');
             $table->string('telefone');
+            $table->string('cpf');
             $table->rememberToken();
             $table->timestamps();
         });
 
         Schema::table('PersonalTrainer', function (Blueprint $table) {
             $table->foreign('privilegios')->references('id')->on('Previlegios');
+            $table->foreign('AtividadeFisicaID')->references('id')->on('AtividadesFisicas');
         });
     }
 
