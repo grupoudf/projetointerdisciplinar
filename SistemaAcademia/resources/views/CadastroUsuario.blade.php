@@ -37,13 +37,8 @@ Cadastro
             <input type="number" name="Telefone" class="form-control" id="telefone" placeholder="telefone">
         </div>
         </div>
-        <div class="row justify-content-center p-3">
-        <div class="col-6">
-        <label for="Atividade Fisica">Atividade física principal</label>
-        <input class="form-control" name="AtividadeFisica" type="text" id="Atividade Fisica">
-        </div>
-        </div>
-        <div class="row">
+
+        <div class="row mt-2">
         <div class="col">
             <label for="Email">Email:</label>
             <input class="form-control" name="email" type="email" id="Email" placeholder="Email">

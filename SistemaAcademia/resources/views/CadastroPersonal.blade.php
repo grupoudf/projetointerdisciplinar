@@ -31,17 +31,35 @@ Cadastro
         <input class="form-control" name="Nascimento" type="date" id="Nascimento" placeholder="Data de Nascimento">
         </div>
         <div class="col">
-
             <label for="telefone">Telefone: </label>
             <input type="number" name="Telefone" class="form-control" id="telefone" placeholder="telefone">
         </div>
-        </div>
-        <div class="row justify-content-center p-3">
-        <div class="col-6">
-        <label for="Atividade Fisica">Atividade física principal</label>
-        <input class="form-control" name="AtividadeFisica" type="text" id="Atividade Fisica">
+        <div class="col">
+          <label for="cpf">CPF: </label>
+          <input type="number" name="cpf" class="form-control" id="cpf" placeholder="CPF">
         </div>
         </div>
+
+
+          <div class="row justify-content-center p-3">
+          <div class="col-6">
+
+          <div class="card p-3">
+              <label for="Atividade Fisica">Atividade física principal</label>
+
+              <select class="form-control" name="AtividadeFisica">
+
+                @foreach ($atividades as $atividade)
+                <option value="{{$atividade->id}}">{{$atividade->AtividadeFisica}}</option>
+                @endforeach
+
+              </select>
+          </div>
+
+          </div>
+          </div>
+
+
         <div class="row">
         <div class="col">
             <label for="Email">Email:</label>
