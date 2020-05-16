@@ -16,15 +16,11 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('CadastroUsuario', function () {
-    return view('CadastroUsuario');
-})->name('CadastroUsuario');
-
-Route::get('CadastroPersonal', function () {
-    return view('CadastroPersonal');
-})->name('CadastroPersonal');
-
 // Rotas que levam ao controllers
+
+Route::get('CadastroUsuario','UserController@Cadastro')->name('CadastroUsuario');
+
+Route::get('CadastroPersonal','PersonalTrainerController@Cadastro')->name('CadastroPersonal');
 
 Route::get('MeuPerfilCliente/{id}','UserController@ExibirPorID')->name('MeuPerfilCliente');
 

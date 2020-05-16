@@ -9,6 +9,10 @@ use App\User;
 
 class UserController extends Controller
 {
+    public function Cadastro(){
+      
+      return view('CadastroUsuario');
+    }
     public function Cadastrar(Request $request){
        $usuario = new User();
 
@@ -17,7 +21,6 @@ class UserController extends Controller
        $usuario->password = Hash::make($request->senha);
        $usuario->sexo = $request->Sexo;
        $usuario->nascimento = $request->Nascimento;
-       $usuario->AtividadeFisica = $request->AtividadeFisica;
        $usuario->telefone = $request->Telefone;
        $usuario->save();
 
@@ -32,6 +35,7 @@ class UserController extends Controller
     }
 
     public function EditarDados(Request $request){
+
       // Recuperando dados do usuario que irá ser modificado
       $usuario = User::find($request->id);
 

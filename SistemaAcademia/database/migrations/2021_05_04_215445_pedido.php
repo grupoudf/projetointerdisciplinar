@@ -16,12 +16,14 @@ class Pedido extends Migration
         Schema::create('Pedido', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('UserId');
-            $table->string('AtividadeFisica');
+            $table->unsignedBigInteger('AtividadeFisicaID');
+            $table->Text('Descricao');
             $table->timestamps();
         });
 
         Schema::table('Pedido', function (Blueprint $table) {
             $table->foreign('UserId')->references('id')->on('users');
+            $table->foreign('AtividadeFisicaID')->references('id')->on('AtividadesFisicas');
         });
     }
 

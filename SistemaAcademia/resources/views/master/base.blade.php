@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S.A||@yield('pagina')</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{asset('style.css')}}">
+
 </head>
 <body>
 
@@ -15,6 +17,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
 
@@ -24,7 +27,7 @@
 
         <div class="btn-group">
           <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <b>Cliente:</b> {{Auth::user()->name}}
+          <b>Cliente:</b> {{Auth::user()->name}}
           </button>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="MeuPerfilCliente/{{Auth::user()->id}}">Meu Perfil</a>
@@ -32,7 +35,7 @@
           <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
           </div>
         </div>
-
+       <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Pedido</a>
         @elseif(Auth::guard('PersonalTrainer')->check())
         <div class="btn-group">
           <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -46,10 +49,19 @@
         </div>
         @else
         <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="{{route('loginn')}}">Login</a>
+
+        <div class="btn-group dropleft">
+          <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Cadastre-se
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{{route('CadastroUsuario')}}">Como Cliente</a>
+            <a class="dropdown-item" href="{{route('CadastroPersonal')}}">Como Personal Trainer</a>
+          </div>
+        </div>
         @endif
-        <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Pedido</a>
        </div>
-</div>
+
       </div>
     </nav>
   </header>
