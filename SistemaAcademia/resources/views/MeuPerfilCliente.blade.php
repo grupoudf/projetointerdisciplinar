@@ -5,7 +5,7 @@ Perfil
 @endsection
 
 @section('conteudo')
-<h1>Meu perfil</h1>
+<h1>Perfil</h1>
 
         <table class='TablePerfil table mt-5'>
             <tr>

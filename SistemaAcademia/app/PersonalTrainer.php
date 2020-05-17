@@ -20,4 +20,8 @@ class PersonalTrainer extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function AtividadeDoPersonal(){
+      return $this->hasOne(AtividadesFisicas::class,'id','AtividadeFisicaID');
+    }
 }

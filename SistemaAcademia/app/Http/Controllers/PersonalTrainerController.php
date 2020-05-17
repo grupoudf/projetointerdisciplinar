@@ -36,10 +36,14 @@ class PersonalTrainerController extends Controller
   public function ExibirPorID($id){
     // Recuperando dados do usuario logado
     $usuario = PersonalTrainer::find($id);
+    // Pegando todas as atividades fisicas cadastradas no sistema para enviar para view
     $atividades = AtividadesFisicas::all();
 
+    // Pegando o valor correspodente 'AtividadeFisicaID' na tabela atividades fisicas
+    $AtividadeDoPersonal = $usuario->AtividadeDoPersonal()->first();
+
     //Enviado usuario e as atividades encotradas como parâmentro para a view
-    return view('MeuPerfilPersonal',['usuario' => $usuario,'atividades'=> $atividades]);
+    return view('MeuPerfilPersonal',['usuario' => $usuario,'atividades'=> $atividades,'AtividadeDoPersonal'=> $AtividadeDoPersonal]);
   }
 
   public function EditarDados(Request $request){

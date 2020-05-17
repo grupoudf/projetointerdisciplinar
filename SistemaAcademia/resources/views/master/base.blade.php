@@ -30,24 +30,26 @@
           <b>Cliente:</b> {{Auth::user()->name}}
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="MeuPerfilCliente/{{Auth::user()->id}}">Meu Perfil</a>
+            <a class="dropdown-item" href="MeuPerfilCliente/{{Auth::user()->id}}">Perfil</a>
             <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
           </div>
         </div>
        <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Pedido</a>
+
         @elseif(Auth::guard('PersonalTrainer')->check())
         <div class="btn-group">
           <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <b>Personal:</b> {{Auth::guard('PersonalTrainer')->user()->name}}
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="MeuPerfilPersonal/{{Auth::guard('PersonalTrainer')->user()->id}}">Meu Perfil</a>
+            <a class="dropdown-item" href="MeuPerfilPersonal/{{Auth::guard('PersonalTrainer')->user()->id}}">Perfil</a>
             <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{{route('LogoutPersonal')}}">Sair</a>
           </div>
         </div>
         @else
+        
         <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="{{route('loginn')}}">Login</a>
 
         <div class="btn-group dropleft">
