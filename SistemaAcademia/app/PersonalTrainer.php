@@ -21,6 +21,8 @@ class PersonalTrainer extends Authenticatable
         'password', 'remember_token',
     ];
 
+    protected $dates = ['nascimento'];
+
     public function AtividadeDoPersonal(){
       return $this->hasOne(AtividadesFisicas::class,'id','AtividadeFisicaID');
     }

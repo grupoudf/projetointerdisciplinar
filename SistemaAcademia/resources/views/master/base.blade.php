@@ -25,7 +25,7 @@
 
         @if(Auth::check())
 
-            @if(Auth::user()->privilegios == 2){
+            @if(Auth::user()->privilegios == 2)
               <div class="btn-group">
                 <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <b>Admin:</b> {{Auth::user()->name}}
@@ -37,8 +37,6 @@
                 <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
                 </div>
               </div>
-
-            }
 
             @else
             <div class="btn-group">
@@ -57,7 +55,7 @@
 
         @elseif(Auth::guard('PersonalTrainer')->check())
 
-              @if(Auth::guard('PersonalTrainer')->user()->privilegios == 2){
+              @if(Auth::guard('PersonalTrainer')->user()->privilegios == 2)
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <b>Admin:</b> {{Auth::guard('PersonalTrainer')->user()->name}}
@@ -69,7 +67,7 @@
                   <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
                   </div>
                 </div>
-              }
+              
 
               @else
               <div class="btn-group">
