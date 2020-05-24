@@ -44,8 +44,8 @@
               <b>Cliente:</b> {{Auth::user()->name}}
               </button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="MeuPerfilCliente/{{Auth::user()->id}}">Perfil</a>
-                <a class="dropdown-item" href="VerPedidos/{{Auth::user()->id}}">Meus Pedidos</a>
+                <a class="dropdown-item" href="{{route('MeuPerfilCliente',['id'=>Auth::user()->id])}}">Perfil</a>
+                <a class="dropdown-item" href="{{route('VerPedidosUsuarioLogado',['id'=>Auth::user()->id])}}">Meus Pedidos</a>
                 <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
               </div>

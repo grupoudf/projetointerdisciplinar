@@ -31,7 +31,7 @@ class PedidoController extends Controller
       return redirect()->route('home');
     }
 
-    public function VerPedidos($id){
+    public function VerPedidosUsuarioLogado($id){
       // Recuperando dados do usuario
       $user = User::find($id);
 
