@@ -12,7 +12,7 @@
 <body>
 
   <header>
-  <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark">
+  <nav class="navbar navbar-dark navbar-expand-md bg-dark">
     <a class="navbar-brand" href="{{route('home')}}">Sistema Academia</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
