@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\AtividadesFisicas;
 use App\Pedido;
+use App\User;
+
 
 class PedidoController extends Controller
 {
@@ -27,5 +29,15 @@ class PedidoController extends Controller
       $pedido->save();
 
       return redirect()->route('home');
+    }
+
+    public function VerPedidos($id){
+      // Recuperando dados do usuario
+      $user = User::find($id);
+
+      // Recuperando todos os pedidos relacionado ao usuario encontrado a cima
+      $pedidos = $user->Pedidos()->get();
+
+      return view('VerPedidos',['pedidos'=> $pedidos, 'usuario'=> $user]);
     }
 }

@@ -12,7 +12,7 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark">
     <a class="navbar-brand" href="{{route('home')}}">Sistema Academia</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -45,7 +45,7 @@
               </button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="MeuPerfilCliente/{{Auth::user()->id}}">Perfil</a>
-                <a class="dropdown-item" href="#">Meus Pedidos</a>
+                <a class="dropdown-item" href="VerPedidos/{{Auth::user()->id}}">Meus Pedidos</a>
                 <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
               </div>
