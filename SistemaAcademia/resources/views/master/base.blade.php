@@ -45,12 +45,13 @@
               </button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="MeuPerfilCliente/{{Auth::user()->id}}">Perfil</a>
+                <a class="dropdown-item" href="#">Meus Pedidos</a>
                 <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
               </div>
             </div>
             @endif
-       <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Pedido</a>
+       <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="{{route('FormCriarPedido')}}">Pedido</a>
 
 
         @elseif(Auth::guard('PersonalTrainer')->check())
@@ -67,7 +68,7 @@
                   <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
                   </div>
                 </div>
-              
+
 
               @else
               <div class="btn-group">

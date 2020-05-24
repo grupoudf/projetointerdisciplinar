@@ -17,6 +17,7 @@ Route::get('/', function () {
 })->name('home');
 
 // Rotas que levam ao controllers
+Route::get('FormCriarPedido','PedidoController@FormCriarPedido')->name('FormCriarPedido');
 
 Route::get('CadastroUsuario','UserController@Cadastro')->name('CadastroUsuario');
 
@@ -33,6 +34,8 @@ Route::post('AlterarPersonal','PersonalTrainerController@EditarDados')->name('Al
 Route::post('CadastrarUsuario','UserController@Cadastrar')->name('CadastrarUsuario');
 
 Route::post('CadastrarPersonal','PersonalTrainerController@Cadastrar')->name('CadastrarPersonal');
+
+Route::post('CriarPedido','PedidoController@CriarPedido')->name('CriarPedido');
 
 // Auth
 Auth::routes();

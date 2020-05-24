@@ -47,6 +47,7 @@ class PersonalTrainerController extends Controller
   }
 
   public function EditarDados(Request $request){
+    
     // Recuperando dados do usuario que irá ser modificado
     $usuario = PersonalTrainer::find($request->id);
 

@@ -17,7 +17,7 @@ class Pedido extends Migration
             $table->id();
             $table->unsignedBigInteger('UserId');
             $table->unsignedBigInteger('AtividadeFisicaID');
-            //Falta o Titulo do pedido
+            $table->Text('Titulo');
             $table->Text('Descricao');
             $table->timestamps();
         });

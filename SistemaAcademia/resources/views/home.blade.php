@@ -12,6 +12,8 @@ Home
 
 
 @elseif((Auth::guard('PersonalTrainer')->check()))
+
 <h3>Bem vindo Personal Trainer</h3>
+
 @endif
 @endsection
