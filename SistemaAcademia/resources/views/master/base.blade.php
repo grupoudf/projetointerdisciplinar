@@ -102,7 +102,7 @@
     </nav>
   </header>
 
-<div class="container mt-5">
+<div class="container mt-2">
 <br>
 @yield('conteudo')
 </div>

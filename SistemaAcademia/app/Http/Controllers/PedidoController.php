@@ -27,7 +27,7 @@ class PedidoController extends Controller
       $pedido->Descricao = $request->Descricao;
 
       $pedido->save();
-
+      
       return redirect()->route('home');
     }
 

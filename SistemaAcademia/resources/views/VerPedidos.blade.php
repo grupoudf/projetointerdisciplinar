@@ -10,7 +10,7 @@ Pedidos
 
 @foreach ($pedidos as $pedido )
 
-<div class="card text-center mt-4">
+<div class="card text-center mt-4 border-secondary mb-3">
   <div class="card-header">
     Pedido Feito por: <b>{{$usuario->name}}</b> <br> Procurando Personal Trainer de: <b>{{$pedido->AtividadeDoPedido()->first()->AtividadeFisica}}</b>
   </div>
