@@ -27,7 +27,7 @@ class PedidoController extends Controller
       $pedido->Descricao = $request->Descricao;
 
       $pedido->save();
-      
+
       return redirect()->route('home');
     }
 
@@ -38,6 +38,21 @@ class PedidoController extends Controller
       // Recuperando todos os pedidos relacionado ao usuario encontrado a cima
       $pedidos = $user->Pedidos()->get();
 
-      return view('VerPedidos',['pedidos'=> $pedidos, 'usuario'=> $user]);
+      // Pegando todas as atividades fisicas do personal para poder enviar para view
+      $atividades = AtividadesFisicas::all();
+
+      return view('VerPedidos',['pedidos'=> $pedidos, 'usuario'=> $user,'atividades'=>$atividades]);
+    }
+
+    public function AlterarPedido(Request $request){
+
+      $pedido = Pedido::find($request->IdPedido);
+
+      $pedido->AtividadeFisicaID = $request->AtividadeFisica;
+      $pedido->Titulo = $request->Titulo;
+      $pedido->Descricao = $request->Descricao;
+
+      $pedido->save();
+      return redirect()->back();
     }
 }

@@ -6,7 +6,7 @@ Perfil
 
 @section('conteudo')
 <h1>Perfil</h1>
-        <table class='TablePerfil table mt-5'>
+        <table class='TablePerfil table mt-4'>
             <tr>
             <td>Nome:</td><td>{{$usuario->name}}</td><td><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#AlterarNome">
               <svg class="bi bi-pencil" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
