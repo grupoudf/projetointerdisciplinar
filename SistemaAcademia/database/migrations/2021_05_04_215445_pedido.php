@@ -17,6 +17,7 @@ class Pedido extends Migration
             $table->id();
             $table->unsignedBigInteger('UserId');
             $table->unsignedBigInteger('AtividadeFisicaID');
+            $table->Text('Titulo');
             $table->Text('Descricao');
             $table->timestamps();
         });

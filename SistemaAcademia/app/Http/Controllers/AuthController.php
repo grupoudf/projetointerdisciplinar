@@ -32,6 +32,7 @@ class AuthController extends Controller
 
       //Logando Cliente
       if($request->login === "User"){
+        
         if(Auth::attempt($credentials)){
 
         return redirect()->route('home');
@@ -53,7 +54,7 @@ class AuthController extends Controller
     }
     // Logout de Cliente
     public function LogoutUser(){
-      
+
         Auth::logout();
         return redirect()->route('home');
     }

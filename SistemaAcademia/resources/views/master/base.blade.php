@@ -12,7 +12,7 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-dark navbar-expand-md bg-dark">
     <a class="navbar-brand" href="{{route('home')}}">Sistema Academia</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,29 +25,65 @@
 
         @if(Auth::check())
 
-        <div class="btn-group">
-          <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <b>Cliente:</b> {{Auth::user()->name}}
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="MeuPerfilCliente/{{Auth::user()->id}}">Meu Perfil</a>
-            <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
-          </div>
-        </div>
-       <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Pedido</a>
+            @if(Auth::user()->privilegios == 2)
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b>Admin:</b> {{Auth::user()->name}}
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="MeuPerfilCliente/{{Auth::user()->id}}">Perfil</a>
+                  <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Painel de Administração</a>
+                  <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
+                </div>
+              </div>
+
+            @else
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <b>Cliente:</b> {{Auth::user()->name}}
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{route('MeuPerfilCliente',['id'=>Auth::user()->id])}}">Perfil</a>
+                <a class="dropdown-item" href="{{route('VerPedidosUsuarioLogado',['id'=>Auth::user()->id])}}">Meus Pedidos</a>
+                <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
+              </div>
+            </div>
+            @endif
+       <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="{{route('FormCriarPedido')}}">Pedido</a>
+
+
         @elseif(Auth::guard('PersonalTrainer')->check())
-        <div class="btn-group">
-          <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <b>Personal:</b> {{Auth::guard('PersonalTrainer')->user()->name}}
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="MeuPerfilPersonal/{{Auth::guard('PersonalTrainer')->user()->id}}">Meu Perfil</a>
-            <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{{route('LogoutPersonal')}}">Sair</a>
-          </div>
-        </div>
+
+              @if(Auth::guard('PersonalTrainer')->user()->privilegios == 2)
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <b>Admin:</b> {{Auth::guard('PersonalTrainer')->user()->name}}
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="MeuPerfilPersonal/{{Auth::guard('PersonalTrainer')->user()->id}}">Perfil</a>
+                    <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Painel de Administração</a>
+                    <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
+                  </div>
+                </div>
+
+
+              @else
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-warning dropdown-toggle m-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <b>Personal:</b> {{Auth::guard('PersonalTrainer')->user()->name}}
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="MeuPerfilPersonal/{{Auth::guard('PersonalTrainer')->user()->id}}">Perfil</a>
+                  <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{{route('LogoutPersonal')}}">Sair</a>
+                </div>
+              </div>
+              @endif
         @else
+
         <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="{{route('loginn')}}">Login</a>
 
         <div class="btn-group dropleft">
@@ -66,7 +102,7 @@
     </nav>
   </header>
 
-<div class="container mt-5">
+<div class="container mt-2">
 <br>
 @yield('conteudo')
 </div>
