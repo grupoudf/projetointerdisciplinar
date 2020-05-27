@@ -11,4 +11,8 @@ class Pedido extends Model
     public function AtividadeDoPedido(){
       return $this->hasOne(AtividadesFisicas::class,'id','AtividadeFisicaID');
     }
+
+    public function Usuarios(){
+      return $this->hasOne(User::class,'id','UserId');
+    }
 }

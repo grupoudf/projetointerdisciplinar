@@ -49,7 +49,7 @@ Perfil
               </button></td>
             </tr>
             <tr>
-              <td colspan="2"><button type='button' class='btn btn-danger'>Excluir Conta</button></td>
+              <td colspan="2"><a href="{{route('ApagarContaCliente',['id'=>$usuario->id])}}" class="btn btn-danger">Excluir Conta</a></td>
             </tr>
         </table>
 

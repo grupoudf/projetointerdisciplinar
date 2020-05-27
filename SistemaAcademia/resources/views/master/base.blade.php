@@ -31,7 +31,7 @@
                 <b>Admin:</b> {{Auth::user()->name}}
                 </button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="MeuPerfilCliente/{{Auth::user()->id}}">Perfil</a>
+                  <a class="dropdown-item" href="{{route('MeuPerfilCliente',['id'=>Auth::user()->id])}}">Perfil</a>
                   <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Painel de Administração</a>
                   <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
@@ -51,7 +51,7 @@
               </div>
             </div>
             @endif
-       <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="{{route('FormCriarPedido')}}">Pedido</a>
+       <a class="btn btn-sm btn-warning px-md-5 m-1" href="{{route('FormCriarPedido')}}">Pedido</a>
 
 
         @elseif(Auth::guard('PersonalTrainer')->check())
@@ -62,7 +62,7 @@
                   <b>Admin:</b> {{Auth::guard('PersonalTrainer')->user()->name}}
                   </button>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="MeuPerfilPersonal/{{Auth::guard('PersonalTrainer')->user()->id}}">Perfil</a>
+                    <a class="dropdown-item" href="{{route('MeuPerfilPersonal',['id'=>Auth::guard('PersonalTrainer')->user()->id])}}">Perfil</a>
                     <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Painel de Administração</a>
                     <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
@@ -76,12 +76,13 @@
                   <b>Personal:</b> {{Auth::guard('PersonalTrainer')->user()->name}}
                 </button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="MeuPerfilPersonal/{{Auth::guard('PersonalTrainer')->user()->id}}">Perfil</a>
+                  <a class="dropdown-item" href="{{route('MeuPerfilPersonal',['id'=>Auth::guard('PersonalTrainer')->user()->id])}}">Perfil</a>
                   <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{{route('LogoutPersonal')}}">Sair</a>
                 </div>
               </div>
               @endif
+              <a class="btn btn-sm btn-warning px-md-5 m-1" href="{{route('VerPedidoPersonal')}}">Ver pedidos</a>
         @else
 
         <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="{{route('loginn')}}">Login</a>
@@ -102,7 +103,7 @@
     </nav>
   </header>
 
-<div class="container mt-2">
+<div class="container">
 <br>
 @yield('conteudo')
 </div>

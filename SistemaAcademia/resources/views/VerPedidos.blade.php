@@ -18,7 +18,7 @@ Pedidos
     <h5 class="card-title">{{$pedido->Titulo}}</h5>
     <p class="card-text">{{$pedido->Descricao}}</p>
 
-    <a href="#" class="btn btn-outline-warning">Excluir</a>
+    <a href="{{route('ApagarPedido',['id'=>$pedido->id])}}" class="btn btn-outline-warning">Excluir</a>
 
     <!-- Botão que aciona o modal de editar -->
     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal{{$pedido->id}}">
@@ -95,8 +95,6 @@ Pedidos
       </div>
     </div>
   </div>
-
-<hr></hr>
 @endforeach
 
 @endsection
