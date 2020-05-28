@@ -17,6 +17,12 @@ Route::get('/', function () {
 })->name('home');
 
 // Rotas que levam ao controllers
+Route::get('VerPedidoPersonal','PedidoController@VerPedidoPersonal')->name('VerPedidoPersonal');
+
+Route::get('ApagarPedido/{id}','PedidoController@ApagarPedido')->name('ApagarPedido');
+
+Route::get('ApagarContaCliente/{id}','UserController@ApagarConta')->name('ApagarContaCliente');
+
 Route::post('AlterarPedido','PedidoController@AlterarPedido')->name('AlterarPedido');
 
 Route::get('VerPedidosUsuarioLogado/{id}','PedidoController@VerPedidosUsuarioLogado')->name('VerPedidosUsuarioLogado');

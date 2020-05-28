@@ -10,9 +10,11 @@ use App\User;
 class UserController extends Controller
 {
     public function Cadastro(){
-      
+
       return view('CadastroUsuario');
     }
+
+
     public function Cadastrar(Request $request){
        $usuario = new User();
 
@@ -81,5 +83,14 @@ class UserController extends Controller
          $usuario->save();
          return redirect()->back();
       }
+    }
+
+    public function ApagarConta($id){
+
+      $usuario = User::find($id);
+
+      $usuario->delete();
+
+      return redirect()->route('home');
     }
 }

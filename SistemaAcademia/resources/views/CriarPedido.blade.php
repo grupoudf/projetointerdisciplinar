@@ -40,7 +40,7 @@ Pedido
   <div class="row">
 
     <div class="col">
-      <button type="button" class="btn btn-outline-warning btn-lg btn-block">Descartar</button>
+     <a href="{{route('home')}}" type="button"class="btn btn-outline-warning btn-lg btn-block">Descartar</a>
     </div>
 
     <div class="col">
