@@ -73,10 +73,26 @@ Perfil
         <!-- Enviando id do usuário através de um input oculto -->
         <input type='hidden' name="id" value="{{$usuario->id}}">
       </div>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="submit" class="btn btn-primary">Salvar alteração</button>
+
+        <div class="container-fluid">
+
+          <div class="row">
+
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning btn-lg btn-block" data-dismiss="modal">Cancelar</button>
+            </div>
+
+            <div class="col">
+               <button type="submit" class="btn btn-warning btn-lg btn-block">Salvar alteração</button>
+            </div>
+
+          </div>
+        </div>
+
       </div>
+
       </form>
     </div>
   </div>
@@ -103,10 +119,26 @@ Perfil
         <!-- Enviando id do usuário através de um input oculto -->
         <input type='hidden' name="id" value="{{$usuario->id}}">
       </div>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="submit" class="btn btn-primary">Salvar alteração</button>
+
+        <div class="container-fluid">
+
+          <div class="row">
+
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning btn-lg btn-block" data-dismiss="modal">Cancelar</button>
+            </div>
+
+            <div class="col">
+               <button type="submit" class="btn btn-warning btn-lg btn-block">Salvar alteração</button>
+            </div>
+
+          </div>
+        </div>
+
       </div>
+
       </form>
     </div>
   </div>
@@ -138,10 +170,26 @@ Perfil
         <!-- Enviando id do usuário através de um input oculto -->
         <input type='hidden' name="id" value="{{$usuario->id}}">
       </div>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="submit" class="btn btn-primary">Salvar alteração</button>
+
+        <div class="container-fluid">
+
+          <div class="row">
+
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning btn-lg btn-block" data-dismiss="modal">Cancelar</button>
+            </div>
+
+            <div class="col">
+               <button type="submit" class="btn btn-warning btn-lg btn-block">Salvar alteração</button>
+            </div>
+
+          </div>
+        </div>
+
       </div>
+
       </form>
     </div>
   </div>
@@ -166,10 +214,26 @@ Perfil
         <!-- Enviando id do usuário através de um input oculto -->
         <input type='hidden' name="id" value="{{$usuario->id}}">
       </div>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="submit" class="btn btn-primary">Salvar alteração</button>
+
+        <div class="container-fluid">
+
+          <div class="row">
+
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning btn-lg btn-block" data-dismiss="modal">Cancelar</button>
+            </div>
+
+            <div class="col">
+               <button type="submit" class="btn btn-warning btn-lg btn-block">Salvar alteração</button>
+            </div>
+
+          </div>
+        </div>
+
       </div>
+
       </form>
     </div>
   </div>
@@ -195,10 +259,26 @@ Perfil
         <!-- Enviando id do usuário através de um input oculto -->
         <input type='hidden' name="id" value="{{$usuario->id}}">
       </div>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="submit" class="btn btn-primary">Salvar alteração</button>
+
+        <div class="container-fluid">
+
+          <div class="row">
+
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning btn-lg btn-block" data-dismiss="modal">Cancelar</button>
+            </div>
+
+            <div class="col">
+               <button type="submit" class="btn btn-warning btn-lg btn-block">Salvar alteração</button>
+            </div>
+
+          </div>
+        </div>
+
       </div>
+
       </form>
     </div>
   </div>
@@ -224,10 +304,26 @@ Perfil
         <!-- Enviando id do usuário através de um input oculto -->
         <input type='hidden' name="id" value="{{$usuario->id}}">
       </div>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="submit" class="btn btn-primary">Salvar alteração</button>
+
+        <div class="container-fluid">
+
+          <div class="row">
+
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning btn-lg btn-block" data-dismiss="modal">Cancelar</button>
+            </div>
+
+            <div class="col">
+               <button type="submit" class="btn btn-warning btn-lg btn-block">Salvar alteração</button>
+            </div>
+
+          </div>
+        </div>
+
       </div>
+
       </form>
     </div>
   </div>
