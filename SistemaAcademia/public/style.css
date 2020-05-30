@@ -5,3 +5,6 @@ h1{
     font-size: 16pt;
     margin: auto;
 }
+#MensagemPedido{
+  color: red;
+}

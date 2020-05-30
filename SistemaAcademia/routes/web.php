@@ -17,7 +17,9 @@ Route::get('/', function () {
 })->name('home');
 
 // Rotas que levam ao controllers
-Route::get('VerPedidoPersonal','PedidoController@VerPedidoPersonal')->name('VerPedidoPersonal');
+Route::get('Candidado/{IdPedido}/{IdPersonal}','CandidatosDoPedidoController@Criar')->name('Candidato');
+
+Route::get('VerPedidoPersonal/{id}','PedidoController@VerPedidoPersonal')->name('VerPedidoPersonal');
 
 Route::get('ApagarPedido/{id}','PedidoController@ApagarPedido')->name('ApagarPedido');
 

@@ -7,6 +7,7 @@ Pedidos
 @section('conteudo')
 <h1>Meus Pedidos</h1>
 
+@if($pedidos->count()>0)
 
 @foreach ($pedidos as $pedido )
 
@@ -24,7 +25,12 @@ Pedidos
     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal{{$pedido->id}}">
       Editar
     </button>
+   <!-- Aqui eu verifico se o pedido possui candidatos -->
+   @if($pedido->Candidatos()->get()->count()>0)
+    <p class="my-1" id="MensagemPedido">Você possui candidatos para esse Pedido. <a><b>Clique aqui</b></a> para vê-los.</p>
+   @endif
   </div>
+
   <div class="card-footer text-muted">
     Realizado em {{$pedido->created_at}}
   </div>
@@ -96,5 +102,11 @@ Pedidos
     </div>
   </div>
 @endforeach
+
+
+@else
+<h2>Você ainda não realizou nenhum pedido, faça um <a href="{{route('FormCriarPedido')}}">pedido</a></h2>
+
+@endif
 
 @endsection

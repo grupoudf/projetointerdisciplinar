@@ -23,7 +23,7 @@ class Pedido extends Migration
         });
 
         Schema::table('Pedido', function (Blueprint $table) {
-            $table->foreign('UserId')->references('id')->on('users');
+            $table->foreign('UserId')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('AtividadeFisicaID')->references('id')->on('AtividadesFisicas');
         });
     }

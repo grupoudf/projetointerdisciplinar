@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\AtividadesFisicas;
 use App\Pedido;
 use App\User;
+use App\CandidatosDoPedido;
+use App\PersonalTrainer;
 
 
 class PedidoController extends Controller
@@ -51,11 +53,12 @@ class PedidoController extends Controller
 
 
 
-   public function VerPedidoPersonal(){
+   public function VerPedidoPersonal($id){
 
      $pedidos = Pedido::all();
+     $candidatos = CandidatosDoPedido::all();
 
-     return view('VerPedidoPersonal',['pedidos'=>$pedidos]);
+     return view('VerPedidoPersonal',['pedidos'=>$pedidos,'candidatos'=>$candidatos]);
    }
 
 

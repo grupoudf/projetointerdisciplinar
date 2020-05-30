@@ -82,7 +82,7 @@
                 </div>
               </div>
               @endif
-              <a class="btn btn-sm btn-warning px-md-5 m-1" href="{{route('VerPedidoPersonal')}}">Ver pedidos</a>
+              <a class="btn btn-sm btn-warning px-md-5 m-1" href="{{route('VerPedidoPersonal',['id'=>Auth::guard('PersonalTrainer')->user()->id])}}">Ver pedidos</a>
         @else
 
         <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="{{route('loginn')}}">Login</a>
