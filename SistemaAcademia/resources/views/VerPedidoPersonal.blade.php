@@ -22,7 +22,9 @@ Pedidos
   @if(isset($pedido->Candidatos->first()->PersonalID))
 
 
-  <!-- Então, vejo se esse personal é candidato desse pedido -->
+  <!-- Então, vejo se esse personal é candidato desse pedido. Mas como pode haver vários candidatos
+  então preciso procurar dentro do array  ate encontrar. Caso no encotre o personal não é candidato do pedido
+-->
       @foreach($pedido->Candidatos()->get() as $candidato)
 
           @if($candidato->PersonalID = Auth::guard('PersonalTrainer')->user()->id)
