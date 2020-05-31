@@ -17,6 +17,8 @@ class Pedido extends Model
     }
 
     public function Candidatos(){
-      return $this->hasMany(CandidatosDoPedido::class, 'PedidoID', 'id');
+
+    return $this->hasMany(CandidatosDoPedido::class, 'PedidoID', 'id');
     }
+
 }

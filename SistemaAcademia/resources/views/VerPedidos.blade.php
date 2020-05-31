@@ -42,14 +42,18 @@ Pedidos
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Personal Trainer que se candidataram ao seu pedido:</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Esses são os candidatos:
-        {{$pedido->Candidatos()->first()->Personal()->name}}
+    <!-- Relacionameno em cima de relacionamento -->
+    @foreach($pedido->Candidatos()->get()  as $candidato)
+      {{$candidato->Personal()->first()->name}}
+      <br>
+    @endforeach
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

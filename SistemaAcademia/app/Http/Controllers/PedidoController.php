@@ -47,8 +47,9 @@ class PedidoController extends Controller
 
       // Pegando todas as atividades fisicas do personal para poder enviar para view
       $atividades = AtividadesFisicas::all();
+      $candidatos = CandidatosDoPedido::all();
 
-      return view('VerPedidos',['pedidos'=> $pedidos, 'usuario'=> $user,'atividades'=>$atividades]);
+      return view('VerPedidos',['pedidos'=> $pedidos, 'usuario'=> $user,'atividades'=>$atividades,'candidato'=>$candidatos]);
     }
 
 
