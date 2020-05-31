@@ -27,7 +27,7 @@ Pedidos
     </button>
    <!-- Aqui eu verifico se o pedido possui candidatos -->
    @if($pedido->Candidatos()->get()->count()>0)
-    <p class="my-1" id="MensagemPedido">Você possui candidatos para esse Pedido. <a><b>Clique aqui</b></a> para vê-los.</p>
+    <p class="my-1" id="MensagemPedido">Você possui {{$pedido->Candidatos()->get()->count()}} candidato(s) para esse Pedido. <a type='button'  data-toggle="modal" data-target="#modalcandidato{{$pedido->id}}"><b>Clique aqui</b></a> para visualizar.</p>
    @endif
   </div>
 
@@ -36,6 +36,28 @@ Pedidos
   </div>
 </div>
 
+<!-- Modal de ver candidatos -->
+
+<div class="modal fade" id="modalcandidato{{$pedido->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Esses são os candidatos:
+        {{$pedido->Candidatos()->first()->Personal()->name}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- Modal de editar-->

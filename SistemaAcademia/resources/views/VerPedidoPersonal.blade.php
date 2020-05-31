@@ -18,28 +18,26 @@ Pedidos
     <p class="card-text">{{$pedido->Descricao}}</p>
 
 
-  <!--Caso esse pedido possua candidatos -->
-  @if(isset($pedido->Candidatos->first()->PersonalID))
-
-
   <!-- Então, vejo se esse personal é candidato desse pedido. Mas como pode haver vários candidatos
   então preciso procurar dentro do array  ate encontrar. Caso no encotre o personal não é candidato do pedido
 -->
-      @foreach($pedido->Candidatos()->get() as $candidato)
 
-          @if($candidato->PersonalID = Auth::guard('PersonalTrainer')->user()->id)
+      @forelse($pedido->Candidatos()->get() as $candidato)
 
-           <a class="btn btn-warning">Você já é candidato, agora resta apenas o cliente aceitar</a>
+          @if($candidato->PersonalID === Auth::guard('PersonalTrainer')->user()->id)
+
+          <a class="btn btn-warning">Você já é candidato, agora resta apenas o cliente aceitar</a>
           @break
+
+          @elseif($loop->last)
+              <a href="{{route('Candidato',['IdPedido'=> $pedido->id,'IdPersonal'=> Auth::guard('PersonalTrainer')->user()->id])}}" class="btn btn-warning">Candidatar-se</a>
           @endif
 
-      @endforeach
-
-  <!-- Caso não seja, libero o link para ele poder se candidatar -->
-  @else
-    <a href="{{route('Candidato',['IdPedido'=> $pedido->id,'IdPersonal'=> Auth::guard('PersonalTrainer')->user()->id])}}" class="btn btn-warning">Candidatar-se</a>
-  @endif
-
+      <!-- Caso esteja vazio, então não existe candidato para o pedido -->
+      @empty
+     <!-- libero o link para ele poder se candidatar -->
+      <a href="{{route('Candidato',['IdPedido'=> $pedido->id,'IdPersonal'=> Auth::guard('PersonalTrainer')->user()->id])}}" class="btn btn-warning">Candidatar-se</a>
+      @endforelse
 
   </div>
   <div class="card-footer text-muted">
