@@ -38,26 +38,40 @@ Pedidos
 
 <!-- Modal de ver candidatos -->
 
-<div class="modal fade" id="modalcandidato{{$pedido->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<div class="modal fade bd-example-modal-lg" id="modalcandidato{{$pedido->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Personal Trainer que se candidataram ao seu pedido:</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Candidato(s) ao seu pedido:</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
+        <p id="MensagemPedido">Atenção, recomendamos que entre em contato com o personal trainer antes de aceitar o pedido.</p>
+        <hr></hr>
     <!-- Relacionameno em cima de relacionamento -->
     @foreach($pedido->Candidatos()->get()  as $candidato)
-      {{$candidato->Personal()->first()->name}}
+      <table class="table table-hover">
+        <tr>
+          <thead class="thead-dark">
+          <th class="col">Nome</th><th class="col">Email</th><th class="col">Telefone</th> <th colspan="2" id="acoes">Ações</th>
+          </thead>
+        </tr>
+        <tr>
+          <td>{{$candidato->Personal()->first()->name}}</td>
+          <td>{{$candidato->Personal()->first()->email}}</td>
+          <td>{{$candidato->Personal()->first()->telefone}}</td>
+          <td><a href="#" class="btn btn-warning" type="button">Aceitar</a></td>
+          <td><a href="#" class="btn btn-outline-warning" type="button">Recusar</a></td>
+        </tr>
+      </table>
       <br>
     @endforeach
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>
