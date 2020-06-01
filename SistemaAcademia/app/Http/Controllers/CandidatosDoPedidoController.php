@@ -15,6 +15,7 @@ class CandidatosDoPedidoController extends Controller
       $Candidatos->PersonalID = $IdPersonal;
 
       $Candidatos->save();
+      
       return redirect()->back();
     }
 }

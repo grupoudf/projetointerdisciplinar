@@ -59,11 +59,22 @@ Pedidos
           </thead>
         </tr>
         <tr>
-          <td>{{$candidato->Personal()->first()->name}}</td>
-          <td>{{$candidato->Personal()->first()->email}}</td>
-          <td>{{$candidato->Personal()->first()->telefone}}</td>
-          <td><a href="#" class="btn btn-warning" type="button">Aceitar</a></td>
-          <td><a href="#" class="btn btn-outline-warning" type="button">Recusar</a></td>
+          <form action="{{route('CriarServico')}}" method="post">
+            @csrf
+            <td>{{$candidato->Personal()->first()->name}}</td>
+            <td>{{$candidato->Personal()->first()->email}}</td>
+            <td>{{$candidato->Personal()->first()->telefone}}</td>
+
+            <!-- Enviando todos os dados na surdina  com inputs ocultos -->
+            <input type="hidden" name="PersonalID" value="{{$candidato->Personal()->first()->id}}">
+            <input type="hidden" name="UserID" value="{{Auth::user()->id}}">
+            <input type="hidden" name="AtividadeFisicaID" value="{{$pedido->AtividadeDoPedido()->first()->id}}">
+            <input type="hidden" name="PedidoID" value="{{$pedido->id}}">
+
+            <td><button type="submit" class="btn btn-warning">Aceitar</button></td>
+            <td><a href="#" class="btn btn-outline-warning" type="button">Recusar</a></td>
+
+          </form>
         </tr>
       </table>
       <br>
