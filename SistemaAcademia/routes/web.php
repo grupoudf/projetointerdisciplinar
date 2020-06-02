@@ -17,6 +17,8 @@ Route::get('/', function () {
 })->name('home');
 
 // Rotas que levam ao controllers
+Route::get('ExibirServicos/{id}','ServicoController@ExibirServicos')->name('ExibirServicos');
+
 Route::post('CriarServico','ServicoController@CriarServico')->name('CriarServico');
 
 Route::get('Candidado/{IdPedido}/{IdPersonal}','CandidatosDoPedidoController@Criar')->name('Candidato');

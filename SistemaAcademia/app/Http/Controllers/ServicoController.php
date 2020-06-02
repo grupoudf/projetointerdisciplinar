@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Servico;
 use App\Pedido;
+use App\User;
 
 class ServicoController extends Controller
 {
@@ -24,5 +25,12 @@ class ServicoController extends Controller
      $pedido->delete();
 
      return redirect()->route('home');
+    }
+
+    public function ExibirServicos($id){
+
+      $cliente = User::find($id);
+
+      return view('Servicos',['cliente'=>$cliente]);
     }
 }

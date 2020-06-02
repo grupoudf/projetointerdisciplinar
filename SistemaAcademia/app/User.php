@@ -40,4 +40,8 @@ class User extends Authenticatable
     public function Pedidos(){
       return $this->hasMany(Pedido::class,'UserId','id');
     }
+
+    public function Servicos(){
+      return $this->hasMany(Servico::class,'UserId','id');
+    }
 }
