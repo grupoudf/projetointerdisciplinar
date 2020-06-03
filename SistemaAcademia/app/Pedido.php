@@ -15,4 +15,10 @@ class Pedido extends Model
     public function Usuarios(){
       return $this->hasOne(User::class,'id','UserId');
     }
+
+    public function Candidatos(){
+
+    return $this->hasMany(CandidatosDoPedido::class, 'PedidoID', 'id');
+    }
+
 }

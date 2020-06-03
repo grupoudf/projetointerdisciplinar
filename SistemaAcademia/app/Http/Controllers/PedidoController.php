@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\AtividadesFisicas;
 use App\Pedido;
 use App\User;
+use App\CandidatosDoPedido;
+use App\PersonalTrainer;
 
 
 class PedidoController extends Controller
@@ -45,17 +47,19 @@ class PedidoController extends Controller
 
       // Pegando todas as atividades fisicas do personal para poder enviar para view
       $atividades = AtividadesFisicas::all();
+      $candidatos = CandidatosDoPedido::all();
 
-      return view('VerPedidos',['pedidos'=> $pedidos, 'usuario'=> $user,'atividades'=>$atividades]);
+      return view('VerPedidos',['pedidos'=> $pedidos, 'usuario'=> $user,'atividades'=>$atividades,'candidato'=>$candidatos]);
     }
 
 
 
-   public function VerPedidoPersonal(){
+   public function VerPedidoPersonal($id){
 
      $pedidos = Pedido::all();
+     $candidatos = CandidatosDoPedido::all();
 
-     return view('VerPedidoPersonal',['pedidos'=>$pedidos]);
+     return view('VerPedidoPersonal',['pedidos'=>$pedidos,'candidatos'=>$candidatos]);
    }
 
 

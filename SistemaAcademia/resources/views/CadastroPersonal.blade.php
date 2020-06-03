@@ -45,7 +45,7 @@ Cadastro
           <div class="col-6">
 
           <div class="card p-3">
-              <label for="Atividade Fisica">Qual atividade fisíca do você procura um personal?</label>
+              <label for="Atividade Fisica">Qual atividade fisíca você está apto para ser Personal?</label>
 
               <select class="form-control" name="AtividadeFisica">
 

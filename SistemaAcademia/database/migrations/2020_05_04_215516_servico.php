@@ -23,8 +23,8 @@ class Servico extends Migration
         });
 
         Schema::table('Servico', function (Blueprint $table) {
-            $table->foreign('UserID')->references('id')->on('users');
-            $table->foreign('PersonalID')->references('id')->on('PersonalTrainer');
+            $table->foreign('UserID')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('PersonalID')->references('id')->on('PersonalTrainer')->onDelete('cascade');
             $table->foreign('AtividadeFisicaID')->references('id')->on('AtividadesFisicas');
         });
     }

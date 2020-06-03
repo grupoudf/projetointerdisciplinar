@@ -7,6 +7,7 @@ Pedidos
 @section('conteudo')
 <h1>Meus Pedidos</h1>
 
+@if($pedidos->count()>0)
 
 @foreach ($pedidos as $pedido )
 
@@ -24,12 +25,68 @@ Pedidos
     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal{{$pedido->id}}">
       Editar
     </button>
+   <!-- Aqui eu verifico se o pedido possui candidatos -->
+   @if($pedido->Candidatos()->get()->count()>0)
+    <p class="my-1" id="MensagemPedido">Você possui {{$pedido->Candidatos()->get()->count()}} candidato(s) para esse Pedido. <a type='button'  data-toggle="modal" data-target="#modalcandidato{{$pedido->id}}"><b>Clique aqui</b></a> para visualizar.</p>
+   @endif
   </div>
+
   <div class="card-footer text-muted">
     Realizado em {{$pedido->created_at}}
   </div>
 </div>
 
+<!-- Modal de ver candidatos -->
+
+<div class="modal fade bd-example-modal-lg" id="modalcandidato{{$pedido->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Candidato(s) ao seu pedido:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="MensagemPedido">Atenção, recomendamos que entre em contato com o personal trainer antes de aceitar o pedido.</p>
+        <hr></hr>
+    <!-- Relacionameno em cima de relacionamento -->
+    @foreach($pedido->Candidatos()->get()  as $candidato)
+      <table class="table table-hover">
+        <tr>
+          <thead class="thead-dark">
+          <th class="col">Nome</th><th class="col">Email</th><th class="col">Telefone</th> <th colspan="2" id="acoes">Ações</th>
+          </thead>
+        </tr>
+        <tr>
+          <form action="{{route('CriarServico')}}" method="post">
+            @csrf
+            <td>{{$candidato->Personal()->first()->name}}</td>
+            <td>{{$candidato->Personal()->first()->email}}</td>
+            <td>{{$candidato->Personal()->first()->telefone}}</td>
+
+            <!-- Enviando todos os dados na surdina  com inputs ocultos -->
+            <input type="hidden" name="PersonalID" value="{{$candidato->Personal()->first()->id}}">
+            <input type="hidden" name="UserID" value="{{Auth::user()->id}}">
+            <input type="hidden" name="AtividadeFisicaID" value="{{$pedido->AtividadeDoPedido()->first()->id}}">
+            <input type="hidden" name="PedidoID" value="{{$pedido->id}}">
+
+            <td><button type="submit" class="btn btn-warning">Aceitar</button></td>
+            <td><a href="#" class="btn btn-outline-warning" type="button">Recusar</a></td>
+
+          </form>
+        </tr>
+      </table>
+      <br>
+    @endforeach
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- Modal de editar-->
@@ -96,5 +153,11 @@ Pedidos
     </div>
   </div>
 @endforeach
+
+
+@else
+<h2>Você ainda não realizou nenhum pedido, faça um <a href="{{route('FormCriarPedido')}}">pedido</a></h2>
+
+@endif
 
 @endsection

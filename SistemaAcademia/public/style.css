@@ -5,3 +5,12 @@ h1{
     font-size: 16pt;
     margin: auto;
 }
+#MensagemPedido{
+  color: red;
+}
+#acoes{
+  text-align: center;
+}
+#numeroservico{
+  text-align: center;
+}
