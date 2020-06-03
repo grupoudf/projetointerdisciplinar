@@ -10,6 +10,12 @@ Home
 @if(Auth::check())
 <h3>Bem vindo Cliente.</h3>
 
+<!-- Mensagens de sucesso -->
+@if(session('success'))
+<div class="alert alert-success" role="alert">
+  {{session('success')}}
+</div>
+@endif
 
 @elseif((Auth::guard('PersonalTrainer')->check()))
 

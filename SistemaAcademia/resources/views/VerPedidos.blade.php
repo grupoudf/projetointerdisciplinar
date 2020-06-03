@@ -9,6 +9,14 @@ Pedidos
 
 @if($pedidos->count()>0)
 
+<!-- Mensagens de sucesso -->
+@if(session('success'))
+<div class="alert alert-success" role="alert">
+  {{session('success')}}
+</div>
+@endif
+
+
 @foreach ($pedidos as $pedido )
 
 <div class="card text-center mt-4 border-secondary mb-3">
@@ -72,8 +80,6 @@ Pedidos
             <input type="hidden" name="PedidoID" value="{{$pedido->id}}">
 
             <td><button type="submit" class="btn btn-warning">Aceitar</button></td>
-            <td><a href="#" class="btn btn-outline-warning" type="button">Recusar</a></td>
-
           </form>
         </tr>
       </table>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Servico;
 use App\Pedido;
 use App\User;
+use App\PersonalTrainer;
 
 class ServicoController extends Controller
 {
@@ -24,13 +25,20 @@ class ServicoController extends Controller
      $servico->save();
      $pedido->delete();
 
-     return redirect()->route('home');
+     return redirect()->route('home')->withSuccess('Serviço criado com sucesso!');
     }
 
-    public function ExibirServicos($id){
+    public function ExibirServicosCliente($id){
 
       $cliente = User::find($id);
 
-      return view('Servicos',['cliente'=>$cliente]);
+      return view('ServicosCliente',['cliente'=>$cliente]);
+    }
+
+    public function ExibirServicosPersonal($id){
+
+      $personal = PersonalTrainer::find($id);
+
+      return view('ServicosPersonal',['personal'=>$personal]);
     }
 }

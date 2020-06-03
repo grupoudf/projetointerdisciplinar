@@ -33,7 +33,7 @@ class PedidoController extends Controller
 
       $pedido->save();
 
-      return redirect()->route('home');
+      return redirect()->back()->withSuccess('Pedido realizado com sucesso');
     }
 
 
@@ -73,7 +73,8 @@ class PedidoController extends Controller
       $pedido->Descricao = $request->Descricao;
 
       $pedido->save();
-      return redirect()->back();
+
+      return redirect()->back()->withSuccess('Pedido alterado com sucesso');
     }
 
 

@@ -33,7 +33,9 @@ class PersonalTrainerController extends Controller
      return redirect()->route('loginn');
   }
 
+  // Perfil do Personal
   public function ExibirPorID($id){
+
     // Recuperando dados do usuario logado
     $usuario = PersonalTrainer::find($id);
     // Pegando todas as atividades fisicas cadastradas no sistema para enviar para view
@@ -47,7 +49,7 @@ class PersonalTrainerController extends Controller
   }
 
   public function EditarDados(Request $request){
-    
+
     // Recuperando dados do usuario que irá ser modificado
     $usuario = PersonalTrainer::find($request->id);
 
@@ -56,49 +58,56 @@ class PersonalTrainerController extends Controller
 
        $usuario->name = $request->nome;
        $usuario->save();
-       return redirect()->back();
+
+       return redirect()->back()->withSuccess('Nome alterado com sucesso');
     }
 
     if(isset($request->email)){
 
        $usuario->email = $request->email;
        $usuario->save();
-       return redirect()->back();
+
+       return redirect()->back()->withSuccess('Email alterado com sucesso');
     }
 
     if(isset($request->Sexo)){
 
        $usuario->sexo = $request->Sexo;
        $usuario->save();
-       return redirect()->back();
+
+       return redirect()->back()->withSuccess('Sexo alterado com sucesso');
     }
 
     if(isset($request->Nascimento)){
 
        $usuario->nascimento = $request->Nascimento;
        $usuario->save();
-       return redirect()->back();
+
+       return redirect()->back()->withSuccess('Nascimento alterado com sucesso');
     }
 
     if(isset($request->AtividadeFisica)){
 
        $usuario->AtividadeFisicaID = $request->AtividadeFisica;
        $usuario->save();
-       return redirect()->back();
+
+       return redirect()->back()->withSuccess('Atividade física alterado com sucesso');
     }
 
     if(isset($request->Telefone)){
 
        $usuario->telefone = $request->Telefone;
        $usuario->save();
-       return redirect()->back();
+
+       return redirect()->back()->withSuccess('Telefone alterado com sucesso');
     }
 
     if(isset($request->cpf)){
 
        $usuario->cpf = $request->cpf;
        $usuario->save();
-       return redirect()->back();
+
+      return redirect()->back()->withSuccess('CPF alterado com sucesso');
     }
   }
 }

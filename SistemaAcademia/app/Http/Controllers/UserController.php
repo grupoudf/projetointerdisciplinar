@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\User;
+use App\Notifications\Cliente;
 
 
 class UserController extends Controller
@@ -46,42 +48,41 @@ class UserController extends Controller
 
          $usuario->name = $request->nome;
          $usuario->save();
-         return redirect()->back();
+
+         return redirect()->back()->withSuccess('Nome alterado com sucesso');
       }
 
       if(isset($request->email)){
 
          $usuario->email = $request->email;
          $usuario->save();
-         return redirect()->back();
+
+         return redirect()->back()->withSuccess('Email alterado com sucesso');
       }
 
       if(isset($request->Sexo)){
 
          $usuario->sexo = $request->Sexo;
          $usuario->save();
-         return redirect()->back();
+
+         return redirect()->back()->withSuccess('Sexo alterado com sucesso');
       }
 
       if(isset($request->Nascimento)){
 
          $usuario->nascimento = $request->Nascimento;
          $usuario->save();
-         return redirect()->back();
+
+         return redirect()->back()->withSuccess('Nascimento alterado com sucesso');
       }
 
-      if(isset($request->AtividadeFisica)){
-
-         $usuario->AtividadeFisica = $request->AtividadeFisica;
-         $usuario->save();
-         return redirect()->back();
-      }
 
       if(isset($request->Telefone)){
 
          $usuario->telefone = $request->Telefone;
          $usuario->save();
-         return redirect()->back();
+
+         return redirect()->back()->withSuccess('Telefone alterado com sucesso');
       }
     }
 
