@@ -8,36 +8,28 @@ e este projeto segue o [Semantic Versioning] (https://semver.org/spec/v2.0.0.htm
 
 # Realizado
 - Remoção de Wikis de repositórios separados, links gerais
-
-# Alterar
-- Imagens de Interface Gráfica
+- Design Mimalista para várias interfaces;
 
 # Correções 
-
-- Otimização de código, repositório e wiki, Padronização de Design
-- Correção do Script e Banco de Dados SQL, Casos de Uso
+- Otimização de código, repositório e wiki, Padronização de Design, Interface Gráfica
+- Revisão da Documentação, Repositório; Landing Page do Sistema via README
+- Indentração de Código, Design Mimalista;
 
 # Adicionado
-
-- Download dos programas: Xammp, Ngrok, MySQL Workbench como depêndencia de projeto via script com wget em python.
-- Melhoramento do Design MVC, Melhoramento na Estrutura de Arquivos, Sistema, Projeto; 
+- Boas Práticas de Programação; Princípio Kiss - Keep It Simple Stupid;
+- Link de Documentos de Projeto Interdisciplinar, Melhoramento visual do sistema, 
 - Opção de Login e Logout, Crud em Laravel, Bootstrap em Laravel; 
 - Barra de navegação, Definição de 3 tipos de usuário : Administrador, Cliente e Personal Trainer;
 
-- Indentração de Código, Design Mimalista;
-- Boas Práticas de Programação;
-- Princípio Kiss - Keep It Simple Stupid;
+# Melhorias
+- Slide de Apresentação de Projeto, Issues no Trello, Gitter; 
+- Xammp, Ngrok, MySQL Workbench podem ser depêndencia no sistema
+- Padrão de Design MVC, Melhoramento na Estrutura de Arquivos, Sistema, Projeto; 
 
-- Pasta cache sobre a informação de cada disciplina ou repositório anexado
-- Simplificação da Wiki, Documentação Geral do Sistema Academia, Repositório ou Guia de Instalação e Configuração;
+# Melhorias
 - Issues específicos : Sugestões de Melhoria, Erros Resolvidos, Falhas, Correções;
-
-- Revisão Textual da Documentação, Repositório; Landing Page do Sistema via README, Design Mimalista para várias interfaces;
-- Link de Documentos de Projeto Interdisciplinar, Engenharia de Software, Banco de Dados; Melhoramento visual do sistema, Slide de Apresentação de Projeto, Wiki do Sistema, Projeto;
+- Simplificação da Wiki, Repositório ou Guia de Instalação e Configuração;
 - Repositório **projetointerdisciplinar**, **engenhariadesoftware**, **bancodedados** foram adicionados em um único repositório
 
 
-# Sugestão de Melhoria
-
-- Issues no Trello, Gitter;
 
