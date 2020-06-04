@@ -7,6 +7,11 @@ Pedido
 @section('conteudo')
 <h1>Procura um Personal Trainer? Faça um pedido!</h1>
 
+@if(session('success'))
+<div class="alert alert-success" role="alert">
+  {{session('success')}}
+</div>
+@endif
 <form action="{{route('CriarPedido')}}" method="post">
   @csrf
   <div class="form-group">

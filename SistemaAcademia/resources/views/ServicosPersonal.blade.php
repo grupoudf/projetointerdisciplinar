@@ -5,11 +5,18 @@ Serviço
 @endsection
 
 @section('conteudo')
-<h1>Seus serviços</h1>
+<h1>Serviços que você está prestando</h1>
 
-@forelse($cliente->Servicos()->get() as $Servico)
+<!-- Mensagens de sucesso -->
+@if(session('success'))
+<div class="alert alert-success" role="alert">
+  {{session('success')}}
+</div>
+@endif
+
+@forelse($personal->Servicos()->get() as $Servico)
 <table class="table table-bordered table-hover mt-5">
-  <caption>Clique no Personal Trainer para visualizar dados de contato</caption>
+  <caption>Clique no cliente para visualizar dados de contato</caption>
   <tr>
     <thead class="thead-dark" id="numeroservico">
     <th colspan="4">Serviço {{$Servico->id}}</th>
@@ -19,10 +26,10 @@ Serviço
     <th>Cliente</th><th>Personal Trainer</th><th>Atívidade fisica</th><th>Data de criação</th>
   </tr>
   <tr>
-    <td>{{$cliente->name}}</td><td><a href="" data-toggle="modal" data-target="#servico{{$Servico->id}}">{{$Servico->Personal()->first()->name}}</a></td><td>{{$Servico->AtividadeFisica()->first()->AtividadeFisica}}</td><td>{{$Servico->created_at}}</td>
+    <td><a href="" data-toggle="modal" data-target="#servico{{$Servico->id}}">{{$Servico->Cliente()->first()->name}}</a></td><td><{{$personal->name}}</td><td>{{$Servico->AtividadeFisica()->first()->AtividadeFisica}}</td><td>{{$Servico->created_at}}</td>
   </tr>
   <tr>
-    <td colspan="4" id="numeroservico" ><a href="" class="btn btn-warning">Cancelar serviço</a></td>
+    <td colspan="4" id="numeroservico" ><a href="{{route('ExcluirServico',['id'=>$Servico->id])}}" class="btn btn-warning">Cancelar serviço</a></td>
   </tr>
 </table>
 
@@ -34,7 +41,7 @@ Serviço
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Dados de contato do Personal</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Dados de contato do cliente</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -46,7 +53,7 @@ Serviço
           </th>
           <th>Email</th>
           <tr>
-            <td>{{$Servico->Personal()->first()->telefone}}</td><td>{{$Servico->Personal()->first()->email}}</td>
+            <td>{{$Servico->Cliente()->first()->telefone}}</td><td>{{$Servico->Cliente()->first()->email}}</td>
           </tr>
         </table>
       </div>
@@ -59,7 +66,6 @@ Serviço
 <hr></hr>
 
 @empty
-<h1>Você ainda não possui um serviço! Para ter um serviço é necessário fazer um <a href="{{route('CriarServico')}}">pedido<a></h1>
+<h1>Você ainda não prestar nenhum um serviço!</h1>
 @endforelse
-
 @endsection

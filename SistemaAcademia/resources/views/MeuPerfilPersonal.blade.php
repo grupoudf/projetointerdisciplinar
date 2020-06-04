@@ -6,6 +6,14 @@ Perfil
 
 @section('conteudo')
 <h1>Perfil</h1>
+
+<!-- Mensagens de sucesso -->
+@if(session('success'))
+<div class="alert alert-success" role="alert">
+  {{session('success')}}
+</div>
+@endif
+
         <table class='TablePerfil table mt-4'>
             <tr>
             <td>Nome:</td><td>{{$usuario->name}}</td><td><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#AlterarNome">

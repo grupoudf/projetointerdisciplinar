@@ -26,4 +26,12 @@ class PersonalTrainer extends Authenticatable
     public function AtividadeDoPersonal(){
       return $this->hasOne(AtividadesFisicas::class,'id','AtividadeFisicaID');
     }
+
+    public function Servicos(){
+      return $this->hasMany(Servico::class,'PersonalId','id');
+    }
+
+    public function TipoUsuario(){
+      return $this->hasOne(Privilegios::class,'id','privilegios');
+    }
 }

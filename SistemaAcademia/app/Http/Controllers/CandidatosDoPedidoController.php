@@ -15,7 +15,7 @@ class CandidatosDoPedidoController extends Controller
       $Candidatos->PersonalID = $IdPersonal;
 
       $Candidatos->save();
-      
-      return redirect()->back();
+
+      return redirect()->back()->withSuccess('Candidatura realizada com sucesso!');
     }
 }

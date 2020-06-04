@@ -8,6 +8,13 @@ Pedidos
 
 <h1>Todos os Pedidos dos clientes</h1>
 
+<!-- Mensagens de sucesso -->
+@if(session('success'))
+<div class="alert alert-success" role="alert">
+  {{session('success')}}
+</div>
+@endif
+
 @foreach ($pedidos as $pedido )
 <div class="card text-center mt-4 border-secondary mb-3">
   <div class="card-header">
