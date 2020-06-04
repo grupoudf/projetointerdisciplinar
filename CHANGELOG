@@ -6,30 +6,19 @@ Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog] (https://keepachangelog.com/en/1.0.0/), 
 e este projeto segue o [Semantic Versioning] (https://semver.org/spec/v2.0.0.html).
 
-# Realizado
-- Remoção de Wikis de repositórios separados, links gerais
-- Design Mimalista para várias interfaces;
-
 # Correções 
+- Barra de navegação para 3 tipos de usuários : Administrador, Cliente e Personal Trainer;
+- Remoção de Wikis de repositórios separados, links gerais, Design Mimalista para várias interfaces;
 - Otimização de código, repositório e wiki, Padronização de Design, Interface Gráfica
 - Revisão da Documentação, Repositório; Landing Page do Sistema via README
-- Indentração de Código, Design Mimalista;
 
 # Adicionado
 - Boas Práticas de Programação; Princípio Kiss - Keep It Simple Stupid;
 - Link de Documentos de Projeto Interdisciplinar, Melhoramento visual do sistema, 
 - Opção de Login e Logout, Crud em Laravel, Bootstrap em Laravel; 
-- Barra de navegação, Definição de 3 tipos de usuário : Administrador, Cliente e Personal Trainer;
 
 # Melhorias
-- Slide de Apresentação de Projeto, Issues no Trello, Gitter; 
 - Xammp, Ngrok, MySQL Workbench podem ser depêndencia no sistema
 - Padrão de Design MVC, Melhoramento na Estrutura de Arquivos, Sistema, Projeto; 
-
-# Melhorias
-- Issues específicos : Sugestões de Melhoria, Erros Resolvidos, Falhas, Correções;
 - Simplificação da Wiki, Repositório ou Guia de Instalação e Configuração;
 - Repositório **projetointerdisciplinar**, **engenhariadesoftware**, **bancodedados** foram adicionados em um único repositório
-
-
-
