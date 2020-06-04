@@ -7,6 +7,13 @@ Serviço
 @section('conteudo')
 <h1>Seus serviços</h1>
 
+<!-- Mensagens de sucesso -->
+@if(session('success'))
+<div class="alert alert-success" role="alert">
+  {{session('success')}}
+</div>
+@endif
+
 @forelse($cliente->Servicos()->get() as $Servico)
 <table class="table table-bordered table-hover mt-5">
   <caption>Clique no Personal Trainer para visualizar dados de contato</caption>
@@ -22,7 +29,7 @@ Serviço
     <td>{{$cliente->name}}</td><td><a href="" data-toggle="modal" data-target="#servico{{$Servico->id}}">{{$Servico->Personal()->first()->name}}</a></td><td>{{$Servico->AtividadeFisica()->first()->AtividadeFisica}}</td><td>{{$Servico->created_at}}</td>
   </tr>
   <tr>
-    <td colspan="4" id="numeroservico" ><a href="" class="btn btn-warning">Cancelar serviço</a></td>
+    <td colspan="4" id="numeroservico" ><a href="{{route('ExcluirServico',['id'=>$Servico->id])}}" class="btn btn-warning">Cancelar serviço</a></td>
   </tr>
 </table>
 

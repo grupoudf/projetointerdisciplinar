@@ -17,6 +17,20 @@ Route::get('/', function () {
 })->name('home');
 
 // Rotas que levam ao controllers
+Route::get('ExcluirServico/{id}','ServicoController@ExcluirServico')->name('ExcluirServico');
+
+Route::get('PromoverCliente/{id}','AdminController@PromoverCliente')->name('PromoverCliente');
+
+Route::get('PromoverPersonal/{id}','AdminController@PromoverPersonal')->name('PromoverPersonal');
+
+Route::get('ExcluirPersonal/{id}','AdminController@ExcluirPersonal')->name('ExcluirPersonal');
+
+Route::get('ExcluirCliente/{id}','AdminController@ExcluirCliente')->name('ExcluirCliente');
+
+Route::get('ExcluirAtividade/{id}','AdminController@ExcluirAtividade')->name('ExcluirAtividade');
+
+Route::post('CadastrarAtividade','AdminController@CadastrarAtividadeFisica')->name('CadastrarAtividade');
+
 Route::get('ExibirServicosPersonal/{id}','ServicoController@ExibirServicosPersonal')->name('ExibirServicosPersonal');
 
 Route::get('ExibirServicosCliente/{id}','ServicoController@ExibirServicosCliente')->name('ExibirServicosCliente');
@@ -58,7 +72,7 @@ Route::post('CriarPedido','PedidoController@CriarPedido')->name('CriarPedido');
 // Auth
 Auth::routes();
 
-Route::get('admin','AuthController@dashboard')->name('admin');
+Route::get('PainelAdministracao','AdminController@PainelAdministracao')->name('PainelAdministracao');
 //Mostrando tela de login
 Route::get('loginn','AuthController@login')->name('loginn');
 //Enviando informações para validar o login

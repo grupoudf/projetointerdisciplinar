@@ -32,8 +32,9 @@
                 </button>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="{{route('MeuPerfilCliente',['id'=>Auth::user()->id])}}">Perfil</a>
-                  <a class="dropdown-item" href="{{route('ExibirServicosCliente')}}">Serviços</a>
-                  <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Painel de Administração</a>
+                  <a class="dropdown-item" href="{{route('ExibirServicosCliente',['id'=>Auth::user()->id])}}">Serviços</a>
+                  <a class="dropdown-item" href="{{route('VerPedidosUsuarioLogado',['id'=>Auth::user()->id])}}">Meus Pedidos</a>
+                  <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="{{route('PainelAdministracao')}}">Painel de Administração</a>
                   <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
                 </div>
@@ -75,8 +76,8 @@
                   </button>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{route('MeuPerfilPersonal',['id'=>Auth::guard('PersonalTrainer')->user()->id])}}">Perfil</a>
-                    <a class="dropdown-item" href="{{route('ExibirServicosPersonal',['id'=>Auth::guard('PersonalTrainer')->user()->id])}}">Serviços</a>
-                    <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="#">Painel de Administração</a>
+                    <a class="dropdown-item" href="{{route('ExibirServicosCliente',['id'=>Auth::user()->id])}}">Serviços</a>
+                    <a class="btn btn-sm btn-outline-warning px-md-5 m-1" href="{{route('PainelAdministracao')}}">Painel de Administração</a>
                     <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="{{route('LogoutUser')}}">Sair</a>
                   </div>

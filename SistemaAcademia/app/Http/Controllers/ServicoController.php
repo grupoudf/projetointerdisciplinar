@@ -41,4 +41,12 @@ class ServicoController extends Controller
 
       return view('ServicosPersonal',['personal'=>$personal]);
     }
+
+    public function ExcluirServico($id){
+
+      $servico = Servico::find($id);
+      $servico->delete();
+
+      return redirect()->back()->withSuccess('Serviço deletado com sucesso!');
+    }
 }

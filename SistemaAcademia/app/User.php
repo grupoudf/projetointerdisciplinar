@@ -44,4 +44,8 @@ class User extends Authenticatable
     public function Servicos(){
       return $this->hasMany(Servico::class,'UserId','id');
     }
+
+    public function TipoUsuario(){
+      return $this->hasOne(Privilegios::class,'id','privilegios');
+    }
 }
